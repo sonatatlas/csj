@@ -1,0 +1,28 @@
+{
+   "name": "csj",
+   "version": "0.0.1",
+   "description": "node server for csj",
+   "main": "index.js",
+   "repository": "https://repository.csj.com/",
+   "author": "mercurio",
+   "license": "MIT",
+   "private": true,
+   "dependencies": {
+      "babel-register": "^6.26.0",
+      "co": "^4.6.0",
+      "co-request": "^1.0.0",
+      "koa": "^2.4.1",
+      "koa-bodyparser": "^4.2.0",
+      "koa-logger": "^3.1.0",
+      "koa-onerror": "^4.0.0",
+      "koa-router": "^7.3.0",
+      "koa-send": "^4.1.1",
+      "koa-static": "^4.0.2",
+      "mongoose": "^4.13.4",
+      "request-promise": "^4.2.2",
+      "webpack": "^3.8.1"
+   },
+   "scripts": {
+      "start": "node ./bin/index.js"
+   }
+}

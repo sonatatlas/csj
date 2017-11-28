@@ -1,0 +1,19 @@
+<!--pages/center/center.wxml-->
+<view class="info">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" />
+  <text>{{userInfo.nickName}}</text>
+</view>
+<view class="order">
+  <view class="order_header">我的订单</view>
+  <view class="order_item">某个订单</view>
+</view>
+<view class="options">
+  <view class="option">优惠券</view>
+  <view class="option">地址管理</view>
+  <view class="option">我要当店主</view>
+  <view class="option">商家入驻</view>
+</view>
+<view class='footer'>
+  <view class="btn">切换身份</view>
+  <view class="btn">在线客服</view>
+</view>

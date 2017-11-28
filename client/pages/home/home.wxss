@@ -1,0 +1,67 @@
+/* pages/home/home.wxss */
+
+page {
+  background-color: #f6f6f6;
+}
+
+.banner{
+  display: flex;
+  background-color: grey;
+  height: 30vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  display: flex;
+  color: #666;
+  font-weight: bold;
+  background-color: #fff;
+  flex-direction: column;
+  margin-top: 2vh;
+}
+
+.purchase-wrapper{
+  display:flex;
+  flex-direction:row;
+}
+
+.purchase-item{
+  display:flex;
+  width: 32vw;
+  height:13vh;
+  margin: 2vw;
+}
+
+.title{
+  margin: 2vw;
+  font-size:12pt;
+  border-width: 1pt;
+  border-color: black
+}
+
+.good-item{
+  margin: 3vw;
+  width:20vw;
+  height:20vw;
+}
+
+.detail-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.search-wrapper{
+  height:9vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search{
+  width:95vw;
+  height:4vh;
+  background-color: #f6f6f6;
+  border-radius: 15rpx;
+}

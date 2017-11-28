@@ -1,0 +1,8 @@
+<!--pages/focus/focus.wxml-->
+<view class="location">发现附近好店</view>
+<view class="switch">
+  <view class="switch-item">店铺</view>
+  <view class="switch-item">商品</view>
+</view>
+<view class="shop">草市集精品旗舰店</view>
+
