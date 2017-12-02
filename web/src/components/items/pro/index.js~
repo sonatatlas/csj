@@ -1,0 +1,27 @@
+import React from 'react'
+import {
+    Col,
+    Form,    
+    Card,
+    CardHeader,
+    CardBody,
+    Container,
+} from 'reactstrap'
+import "./index.css"
+
+
+import Limit from './limit'
+
+const URL = process.env.PUBLIC_URL
+
+const Pro = ()=>(
+	<Card className="mt-3">
+	<CardHeader>其他信息</CardHeader>
+	<CardBody>
+	<Limit />	
+	</CardBody>
+	</Card>
+)
+
+
+export default Pro

@@ -1,0 +1,11 @@
+//cstmService.js
+
+const style = {
+    ctnr:{
+	display:'flex',
+	flex:1,
+    }
+
+}
+
+export default style

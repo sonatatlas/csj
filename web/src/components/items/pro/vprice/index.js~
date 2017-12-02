@@ -1,0 +1,11 @@
+import React from 'react'
+import {
+    FormGroup
+}from 'reactstrap'
+
+const Vprice = ()=>(
+	<FormGroup row>
+	</FormGroup>
+)
+
+export default Vprice

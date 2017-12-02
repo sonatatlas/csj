@@ -1,7 +1,6 @@
 {
   "pages":[
     "pages/home/home",
-    "pages/index/index",
     "pages/logs/logs",
     "pages/focus/focus",
     "pages/cart/cart",
@@ -24,13 +23,19 @@
       "selectedIconPath":"public/home_2.png"
     },{
       "pagePath":"pages/focus/focus",
-      "text":"关注"
+      "text":"关注",
+      "iconPath": "public/focus_1.png",
+      "selectedIconPath": "public/focus_2.png"
     },{
       "pagePath":"pages/center/center",
-      "text":"我的"
+      "text":"我的",
+      "iconPath": "public/mine_1.png",
+      "selectedIconPath": "public/mine_2.png"
     },{
       "pagePath":"pages/cart/cart",
-      "text":"购物车"
+      "text":"购物车",
+      "iconPath": "public/cart_1.png",
+      "selectedIconPath": "public/cart_2.png"      
     }]
   }
 }

@@ -1,0 +1,14 @@
+import React,{Component} from 'react'
+
+import Carousel from '../../components/home/carousel'
+console.log(process.env)
+export default class Home extends Component{
+
+    render(){
+	return(
+		<div>
+		<Carousel activeIndex={1}/>
+	    </div>
+	)
+    }
+}

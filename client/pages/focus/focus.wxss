@@ -1,7 +1,4 @@
 /* pages/focus/focus.wxss */
-page{
-  background-color: #f6f6f6
-}
 
 .location{
   display: flex;
@@ -26,10 +23,11 @@ page{
 }
 
 .shop{
+  margin-top: 1.5vw;
   display: flex;
   height:12vh;
   width:100vw;
-  background-color: #ccc;
+  background-color: #fff;
   align-items: center;
   justify-content: center;
 }

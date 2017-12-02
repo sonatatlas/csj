@@ -4,8 +4,8 @@
  */
 
 //global
-global.COMPONENT = __dirname + '/component'
-global.CONTENT = __dirname + '/content'
+global.COMPONENTS = __dirname + '/components'
+global.CONTENTS = __dirname + '/contents'
 global.URL = 'http://localhost:3000/'
 
 //module
@@ -15,16 +15,18 @@ const body = require('koa-bodyparser')
 const serve = require('koa-static')
 const onerror = require('koa-onerror')
 const router = require('./router')
-
+const cors = require('@koa/cors')
+const session = require('koa-session')
 const app = new Koa()
-onerror(app)
 
 //mid-ware
 app.use(log())
-app.use(body())
+app.use(body({multipart: true}))
+app.use(cors())
 app.use(serve('public'))
 app.use(router.routes()).use(router.allowedMethods())
 
-//router
+onerror(app)
+app.use(session(app))
 
 module.exports = app

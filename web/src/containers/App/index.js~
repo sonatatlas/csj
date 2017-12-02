@@ -1,0 +1,40 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+
+import { isOpen } from '../../actions/navbar'
+
+import NavBar from '../../components/navbar'
+import Router from '../../components/router'
+
+import Home from '../home'
+import Items from '../items'
+
+const Containers={Home,Items}
+
+//containers will try to dispatch state&&props to actions
+
+class App extends Component {
+    static propTypes = {
+	isOpen: PropTypes.bool.isRequired,	
+	dispatch : PropTypes.func.isRequired
+    }
+    toggle = () =>{this.props.dispatch(isOpen(!this.props.isOpen))}
+    render() {
+	return (
+		<div>
+		<NavBar isOpen={this.props.isOpen} toggle={this.toggle}/>
+		<Router Containers={Containers}/>
+		</div>
+	);
+    }
+}
+
+const mapStateToProps = state => {
+    const { isOpen }=state.navbarReducer
+    return {
+	isOpen
+    }    
+}
+
+export default connect(mapStateToProps)(App);

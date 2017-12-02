@@ -1,0 +1,22 @@
+import {StyleSheet} from 'react-native'
+import {h,w} from '../../../global'
+
+const style = StyleSheet.create({
+    ctnr:{
+        display:'flex',
+	flexDirection:'row',
+	height:0.15*w,
+	backgroundColor:'#eee',
+    },
+    btn:{
+	width:0.5*w,
+	display:'flex',
+	flex:1,
+	justifyContent:'center',
+	alignItems:'center',
+	borderBottomWidth:1,
+	borderColor:'#bbb'
+    }
+})
+
+export default style

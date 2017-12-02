@@ -1,23 +1,15 @@
 
 //init
 const Router = require('koa-router')
-const router = new Router()
+const offical = require('./offical')
+const client = require('./client')
+const business = require('./business')
 
-//module
-const login = require(COMPONENT + '/c/login')
-const home = require(CONTENT + '/c/home')
+const rootRouter = new Router()
 
+rootRouter.use('/client',client.routes(),client.allowedMethods())
+rootRouter.use('/offical',offical.routes(),offical.allowedMethods())
+rootRouter.use('/business',business.routes(),business.allowedMethods())
 
-//router
-//index
-router.get('/', ctx=>{console.log('you got me')})
+module.exports = rootRouter
 
-//login
-router.get('/login',login.get)
-
-//home
-router.get('/home',home.get)
-
-
-
-module.exports= router

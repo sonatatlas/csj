@@ -1,0 +1,36 @@
+.jbt{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background-color:#828282;
+    height:50vh;
+    color:#eee;
+}
+
+.jbt-foot{
+    font-weight:normal;
+    display:flex;
+    justify-content:center;
+    align-items:center;    
+    background-color:#454545;
+    height:20vh;
+    color:#fff
+}
+
+.space-font{
+    font-size:4vh;
+    padding: 0 3vw;
+    border-right:2px solid white;
+}
+
+.sf-last{
+    font-size:4vh;
+    padding:3vw;
+}
+
+.ft-intro{
+    text-align:center;
+    font-size:3vh;
+    margin-top:8vh;
+}

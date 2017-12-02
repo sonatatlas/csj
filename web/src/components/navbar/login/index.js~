@@ -1,0 +1,26 @@
+import React from 'react';
+import {
+    Button, Modal, ModalHeader, ModalBody, ModalFooter,
+    Label,Input,Form,FormGroup
+} from 'reactstrap';
+
+
+const LoginModal = ({modalState,loginToggle,completeLogin}) =>(
+	<div>
+        <Modal isOpen={modalState} toggle={loginToggle} >
+        <ModalHeader toggle={loginToggle}>请登录</ModalHeader>
+        <ModalBody>
+	<Form>
+	<FormGroup><Label>用户名</Label><Input type="text" /></FormGroup>
+	<FormGroup><Label>密码</Label><Input type="password" /></FormGroup>	
+	</Form>
+        </ModalBody>
+        <ModalFooter>
+        <Button color="secondary" onClick={loginToggle}>取消</Button>
+        <Button color="primary" onClick={completeLogin}>登录</Button>
+        </ModalFooter>
+        </Modal>
+	</div>
+)
+
+export default LoginModal

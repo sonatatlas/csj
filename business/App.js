@@ -1,23 +1,25 @@
+//App
+
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import Csj from './src'
+import reducer from './src/reducers'
+import {createStore,applyMiddleware} from 'redux'
+import { Provider } from 'react-redux'
+import thunk from 'redux-thunk'
+
+const store = createStore(
+    reducer,
+    applyMiddleware(thunk)
+)
 
 export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-	    <Text>草市集</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    );
+    render() {
+      return (
+	      <Provider store={store}>
+	      <Csj />
+	      </Provider>
+      );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+

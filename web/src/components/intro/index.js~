@@ -1,0 +1,27 @@
+import React from 'react'
+import {
+    Container
+} from 'reactstrap'
+import "./index.css"
+
+const URL = process.env.PUBLIC_URL
+
+const Intro = ()=>(
+    <div>
+	<div className="jbt">
+	<h1>www.caoshi.shop</h1>
+	<h5>0元小程序店铺，就这么简单</h5></div>
+	<div className="jbt-foot">
+	<text className="space-font">好处一</text>
+	<text className="space-font">好处二</text>
+	<text className="space-font">好处三</text>
+	<text className="space-font">好处四</text>		
+	<text className="sf-last">好处五</text></div>
+	<Container>
+	<div className="ft-intro">迄今为止，草市集已经帮助了10万个店主创立了自己的小程序店铺</div>
+	</Container>
+	</div>
+)
+
+
+export default Intro

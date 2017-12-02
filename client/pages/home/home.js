@@ -5,7 +5,7 @@ const setUserInfo = require('../../utils/login.js')
 
 //main
 const app = getApp()
-
+console.log(app)
 Page({
 
   /**
@@ -24,7 +24,7 @@ Page({
     const that = this
     setUserInfo(that)
     wx.request({
-      url: "http://localhost:3000/home",
+      url: "http://192.168.1.105:6262/client/home",
       method: "GET",
       success: (res)=>{
         that.setData({shopInfo:res.data[0]})

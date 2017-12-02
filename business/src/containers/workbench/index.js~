@@ -1,0 +1,14 @@
+import React,{Component} from 'react';
+
+import WorkbenchComponent  from '../../containers/workbench'
+
+class Workbench extends Component{
+    render(){
+	return(
+	    <WorkbenchComponent />
+	)
+    }
+}
+
+
+export default Workbench

@@ -5,18 +5,18 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
+    const url = this.globalData.url
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        wx.request({
-          url: "http://localhost:3000/login?code="+res.code,
-          method: 'GET',
-          success:(res)=>{
-            wx.setStorageSync('openid', res.data.openid)
-          }
-        })
+        // wx.request({
+        //   url: url+"/login?code="+res.code,
+        //   method: 'GET',
+        //   success:(res)=>{
+        //     wx.setStorageSync('openid', res.data.openid)
+        //   }
+        // })
       }
     })
 
@@ -24,24 +24,6 @@ App({
     var res = wx.getStorageInfoSync()
     console.log(res.keys)
 
-    wx.checkSession({
-      success: function () {
-        //session 未过期，并且在本生命周期一直有效
-      },
-      fail: function () {
-        //登录态过期
-        //重新登录
-        wx.login({
-          success: res => {
-            // 发送 res.code 到后台换取 openId, sessionKey, unionId
-            wx.request({
-              url: "http://localhost:3000/login",
-              data:res.code
-            })
-          }
-        }) 
-      }
-    })
     
     // 获取用户信息
     wx.getSetting({
@@ -65,6 +47,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    url: "http://localhost:3000"
+    url: "http://192.168.1.105:6262/client"
   }
 })
