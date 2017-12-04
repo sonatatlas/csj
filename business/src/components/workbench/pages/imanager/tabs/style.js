@@ -1,27 +1,26 @@
 import {StyleSheet} from 'react-native'
-import {h,w} from '../../../../../global'
 
 const style = StyleSheet.create({
     ctnr:{
         display:'flex',
 	flexDirection:'row',
-	height:13*w,
+	height:13,
 	backgroundColor:'#fff',
 	borderColor:'#ddd',
-	borderBottomWidth:0.1*w
+	borderBottomWidth:0.1
     },
     btn:{
 	display:'flex',
 	flex:1,
-	width:100/4*w,
+	width:100/4,
 	justifyContent:'center',
 	alignItems:'center'
     },
     bfw:{
 	display:'flex',
 	justifyContent:'center',
-	paddingLeft:3.8*w,
-	paddingRight:3.8*w,	
+	paddingLeft:3.8,
+	paddingRight:3.8,	
 	flex:1,
     },
     bfwTap:{

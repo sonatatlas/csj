@@ -2,7 +2,6 @@ import React from 'react';
 
 
 import s from './style.js'
-import {url,color} from '../../global'
 import Item from './item'
 import {
     View,ListView,StatusBar,Text, TouchableOpacity

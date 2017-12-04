@@ -1,31 +1,31 @@
 import {StyleSheet} from 'react-native'
-import {h,w} from '../../../global'
+
 
 const style = StyleSheet.create({
     ctnr:{
         display:'flex',
 	flex:1,
 	flexDirection:'row',
-	marginTop:1*h
+	marginTop:1
     },
     nctnr:{
         display:'flex',
         justifyContent:'center',
         alignItems:'center',
-	height:33*w,
-	width:33*w,
+	height:33,
+	width:33,
 	backgroundColor:'#fff',
 	borderColor:'#eee',
 	borderWidth:1
     },
     icon:{
-	height:12*w,
-	width:12*w
+	height:12,
+	width:12
     },
     label:{
-	marginTop:4*w,
+	marginTop:4,
         color:'#999',
-        fontSize:5*w
+        fontSize:5
     },
     listViewStyle:{
 	flexDirection:'row',  

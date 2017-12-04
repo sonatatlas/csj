@@ -1,10 +1,9 @@
 //cstmService.js
 import {StyleSheet} from 'react-native'
-import {h,w,color} from '../../../../global'
 
 const style = StyleSheet.create({
     ctnr:{
-	marginTop:3.8*w,	
+	marginTop:8,	
     },
     actnr:{
         display:'flex',
@@ -16,13 +15,13 @@ const style = StyleSheet.create({
         backgroundColor:'#fff',
     },
     label:{
-	fontSize:4.2*w,
-	margin:4.2*w,
+	fontSize:15,
+	margin:12,
 	color:'#666'
     },
     info:{
-	margin:4.2*w,
-	fontSize:5*w,
+	margin:12,
+	fontSize:15,
 	color:'#333'
     },
     listViewStyle:{

@@ -1,5 +1,4 @@
 import {StyleSheet} from 'react-native'
-import {h,w} from '../../../../../global'
 
 const style = StyleSheet.create({
     ctnr:{
@@ -19,8 +18,8 @@ const style = StyleSheet.create({
 	alignItems:'center'
     },
     btn:{
-	width:30*w,
-	height:10*w,	
+	width:30,
+	height:10,	
         display:'flex',
 	justifyContent:'center',
 	alignItems:'center',

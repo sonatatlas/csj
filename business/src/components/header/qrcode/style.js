@@ -1,5 +1,4 @@
 import {StyleSheet} from 'react-native'
-import {w} from '../../../global'
 
 const style = StyleSheet.create({
     ctnr:{
@@ -9,7 +8,7 @@ const style = StyleSheet.create({
 	alignItems:'center'
     },
     sf:{
-	fontSize:5*w,
+	fontSize:15,
 	color:'#999'
     }
 })

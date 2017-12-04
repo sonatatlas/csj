@@ -8,8 +8,7 @@ import {
 
 import Item from './item'
 import s from './style'
-import {url} from '../../../global'
-
+const url = 'a'
 const moduleList = [{
     label:'订单管理', icon:url+'/b/workbench/order.png',isnew:'',jump:'Omanager'
 },{

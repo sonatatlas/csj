@@ -2,7 +2,6 @@ import React from 'react';
 
 
 import s from './style.js'
-import {url} from '../../../../global'
 import Item from './item'
 import {
     View,ListView,StatusBar

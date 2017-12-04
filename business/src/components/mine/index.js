@@ -2,7 +2,6 @@ import React from 'react';
 
 
 import s from './style.js'
-import {url} from '../../global'
 import Item from './item'
 import {
     View, Image, Text,ListView,TouchableOpacity,ScrollView,Alert
@@ -35,12 +34,12 @@ const prortgs = ds.cloneWithRows(prortg)
 const Mine = () => (
 	<ScrollView style={s.ctnr}>
 	<View style={s.sctnr} >
-	<Image style={s.shop} source={{uri: url+'/logo/logo.png'}}/>
+	<Image style={s.shop} source={require('./logo.png')}/>
 	<Text style={s.tf}>草市集</Text>
 	</View>	
 	<View style={s.rtgbg}><View style={s.actnr} >
 	<Text style={s.tf}>头像</Text>	
-	<Image style={s.shop} source={{uri: url+'/logo/logo.png'}}/>
+	<Image style={s.shop} source={require('./logo.png')}/>
 	</View>
         <ListView
     scrollEnabled={false} dataSource={infortgs}

@@ -1,5 +1,4 @@
 import {StyleSheet} from 'react-native'
-import {h,w,color} from '../../../global'
 
 const style = StyleSheet.create({
     ctnr:{
@@ -8,7 +7,7 @@ const style = StyleSheet.create({
 	justifyContent:'space-around',
 	alignItems:'center',
 	height:128,
-	backgroundColor:color,
+	backgroundColor:'#4283a1',
     },
     nctnr:{
         display:'flex',

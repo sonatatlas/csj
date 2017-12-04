@@ -6433,6 +6433,10 @@ watch@~0.10.0:
   version "0.10.0"
   resolved "http://registry.npm.taobao.org/watch/download/watch-0.10.0.tgz#77798b2da0f9910d595f1ace5b0c2258521f21dc"
 
+watchman@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/watchman/download/watchman-1.0.0.tgz#a800f815957952ed9229c54610fb4a26897d2c21"
+
 watchpack@^1.4.0:
   version "1.4.0"
   resolved "http://registry.npm.taobao.org/watchpack/download/watchpack-1.4.0.tgz#4a1472bcbb952bd0a9bb4036801f954dfb39faac"
