@@ -20,8 +20,9 @@ class Workbench extends Component{
 	tabBarIcon:ICON	
     }
     render(){
+	const {navigate} = this.props.navigation
 	return(
-	    <WorkbenchComponent />
+		<WorkbenchComponent navigate={navigate}/>
 	)
     }
 }

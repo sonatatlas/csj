@@ -1,0 +1,30 @@
+//login reducer
+
+
+import {combineReducers} from 'redux'
+import {
+    ACCESSTAB,OMANAGERTAB,IMANAGERTAB,PMANAGERTAB
+} from '../../actions/cstmService'
+
+const isLeft=(state=true,action)=>{
+    switch(action.type){
+    case ACCESSTAB:
+	return action.reddit
+    default:
+	return state
+    }
+}
+const omanagerTab = (state=1,action)=>{
+    switch(action.type){
+    case OMANAGERTAB:
+	return action.reddit
+    default:
+	return state
+    }
+}
+
+const cstmServiceReducers = combineReducers({
+    isLeft,omanagerTab
+})
+
+export default cstmServiceReducers

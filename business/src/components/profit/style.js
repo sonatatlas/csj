@@ -1,0 +1,80 @@
+//cstmService.js
+import {StyleSheet} from 'react-native'
+import {h,w,color} from '../../global'
+
+const style = StyleSheet.create({
+    ctnr:{
+    },
+    actnr:{
+        display:'flex',
+	justifyContent:'space-between',
+	borderBottomWidth:1,
+	borderColor:'#dedede',
+        backgroundColor:'#fff',
+    },
+    label:{
+	marginLeft:3.8*w,
+	marginTop:3.2*w,
+	marginBottom:1.2*w,
+	fontSize:5*w,
+	color:'#333'
+    },
+    info:{
+	marginLeft:3.8*w,
+	marginBottom:3.2*w,	
+	fontSize:3.8*w,	
+	color:'#666'
+    },
+    listViewStyle:{
+        flexDirection:'column',
+    },
+    cdbg:{
+	backgroundColor:color,
+	height:38*w,
+	display:'flex',
+	justifyContent:'space-around'
+    },
+    cdhd:{
+	marginLeft:3.8*w,
+	color:'#eee',
+	fontSize:3.8*w
+    },
+    cdsm:{
+	color:'#eee',
+	fontSize:9*w,
+	textAlign:'center'
+    },
+    cdid:{
+	marginLeft:3.8*w,
+	fontSize:5*w,
+	color:'#eee',	
+    },
+    wdbg:{
+	display:'flex',
+	justifyContent:'center',
+	alignItems:'center',
+	height:20*w,
+	backgroundColor:'#fff',
+	marginBottom:3.8*w
+    },
+    wdbtn:{
+	backgroundColor:color,
+	display:'flex',
+	justifyContent:'center',
+	width:20*w,
+	height:8*w,
+	borderRadius:5,
+	marginBottom:1*w
+    },
+    wdtext:{
+	textAlign:'center',
+	fontSize:5*w,
+	color:'#eee',
+    },
+    wdinfo:{
+	fontSize:3*w,
+	color:'#999'	
+    }
+})
+
+export default style

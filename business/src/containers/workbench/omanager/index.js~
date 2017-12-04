@@ -1,0 +1,45 @@
+import React,{Component} from 'react';
+import {connect} from 'react-redux'
+import {url,style,color} from '../../../global'
+import OmanagerModel from '../../../components/workbench/pages/omanager'
+import {
+    Keyboard,Image,View
+} from 'react-native'
+
+import {switchOmanagerTab} from '../../../actions/cstmService'
+
+const dsms =()=>Keyboard.dismiss()
+
+
+class Omanager extends Component{
+    static navigationOptions = {
+	title:"全部订单",
+        headerTitleStyle:{color:'#999',fontSize:22},
+        headerStyle:{backgroundColor:'#fff'},
+	headerBackTitleStyle:{color:'#eee'}
+    }
+    render(){
+	const {omanagerTab,dispatch} = this.props
+	return(
+		<OmanagerModel
+	    dsms={dsms}
+	    omanagerTab={omanagerTab}
+	    switchOmanagerTab={(tab)=>dispatch(switchOmanagerTab(tab))}
+		/>
+	)
+    }
+}
+
+
+const mapStateToProps = state=>{
+    console.log('where is state?')
+    console.log(state)
+    const {omanagerTab} = state.cstmServiceReducer
+    return{
+	omanagerTab
+    }
+}
+export default connect(mapStateToProps)(Omanager)
+
+
+

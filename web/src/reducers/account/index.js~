@@ -1,0 +1,22 @@
+import { combineReducers } from 'redux'
+import {
+    TOGGLELOGIN
+} from '../../actions/account'
+
+
+const isShownLogin = (state=false, action)=>{
+    switch (action.type){
+    case SHOWLOGIN:
+	return action.reddit
+    default:
+	return state
+    }
+}
+      
+const accountReducer = combineReducers({
+    isShownLogin
+})
+
+
+
+export default accountReducer

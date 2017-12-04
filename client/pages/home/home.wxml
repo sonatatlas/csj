@@ -1,6 +1,6 @@
 <!--pages/home/home.wxml-->
 <view class="search-wrapper">
-  <input class="search"></input>
+  <input class="search" placeholder-class='ph' placeholder='搜索' />
 </view>
 
 <swiper indicator-dots="{{indicatorDots}}"

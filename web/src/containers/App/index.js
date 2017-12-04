@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-
-import Navbar from '../navbar'
+import Navbar from '../navbar';
 
 //components
-import Router from '../../components/router'
+import RouterComponent from '../../components/router'
 
 //containers
 import Home from '../home'
@@ -14,15 +13,15 @@ const Containers={Home,Items,Intro}
 
 //containers will try to dispatch state&&props to actions
 
-class NavBar extends Component {
+class App extends Component {
     render() {
 	return (
 		<div>
 		<Navbar />
-		<Router Containers={Containers}/>
+		<RouterComponent Containers={Containers}/>
 		</div>
 	);
     }
 }
 
-export default NavBar
+export default App

@@ -1,7 +1,7 @@
+//mine containers
+
 import React,{Component} from 'react';
-
 import ProfitComponent from '../../components/profit'
-
 import {Image} from 'react-native'
 import {url,style,color} from '../../global'
 
@@ -21,9 +21,10 @@ class Profit extends Component{
     }
     render(){
 	return(
-		<ProfitComponent />
+	    <ProfitComponent />
 	)
     }
 }
+
 
 export default Profit

@@ -1,7 +1,6 @@
 /* pages/cart/cart.wxss */
 .title{
   display: flex;
-  width: 100vw;
   height: 8vh;
   background-color: #fff;
   justify-content: flex-start;
@@ -12,6 +11,5 @@
   margin-top: 1vw;
   display: flex;
   height: 50vh;
-  width: 100vw;
   background-color: #fff;
 }

@@ -1,0 +1,10 @@
+
+
+.ctnr{
+
+}
+.qrcode{
+    margin-left:20vw;
+    width:20vw;
+    height:20vw;
+}

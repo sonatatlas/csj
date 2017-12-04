@@ -15,7 +15,6 @@
 .order_header{
   display: flex;
   background-color: #fff;
-  width: 100vw;
   height: 8vh;
   align-items: center;
   padding-left: 5vw;
@@ -25,7 +24,6 @@
   display: flex;
   background-color: #fff;
   height: 15vh;
-  width: 100vw;
   padding-left: 5vw;
   margin-bottom: 2vw;
 }
@@ -37,7 +35,6 @@
   align-items: center;
   background-color: #fff;
   padding-left: 5vw;
-  width: 100vw;
   height: 8vh;
   margin-bottom: 1vw;
 }
@@ -48,10 +45,9 @@
   width:100vw;
   align-items: center;
   justify-content: space-around;
-  flex-direction: row;
 }
 .btn{
-  width:33vw;
+  width:42vw;
   height: 7vh;
   background-color: #fff;
   margin: 2vw;

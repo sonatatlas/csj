@@ -1,9 +1,5 @@
 /* pages/home/home.wxss */
 
-page {
-  background-color: #f6f6f6;
-}
-
 .banner{
   display: flex;
   background-color: grey;
@@ -60,8 +56,14 @@ page {
 }
 
 .search{
-  width:95vw;
-  height:4vh;
+  width:92vw;
+  height:6vh;
+  padding-left: 2vw;
   background-color: #f6f6f6;
   border-radius: 15rpx;
+}
+
+.ph{
+  text-align: center;
+  font-size: 30rpx;
 }

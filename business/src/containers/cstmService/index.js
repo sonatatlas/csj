@@ -1,11 +1,13 @@
 import React,{Component} from 'react';
-import CstmServiceComponent from '../../components/cstmService'
-import {
-    Keyboard,Image
-} from 'react-native'
+import {connect} from 'react-redux'
+import {Keyboard,Image} from 'react-native'
 import {url,style,color} from '../../global'
 
+import CstmServiceComponent from '../../components/cstmService'
+import {switchAccessTab} from '../../actions/cstmService'
+
 const dsms =()=>Keyboard.dismiss()
+
 
 const ICON = ({focused,tintColor})=>(
     focused?
@@ -21,12 +23,22 @@ class CstmService extends Component{
         tabBarIcon:ICON
     }
     render(){
-	const p = {dsms}
+	const {isLeft,dispatch} = this.props
 	return(
-		<CstmServiceComponent p={p} />
+		<CstmServiceComponent
+	    dsms={dsms}
+	    isLeft={isLeft}
+	    switchAccessTab={(left)=>dispatch(switchAccessTab(left))}
+		/>
+
 	)
     }
 }
 
-
-export default CstmService
+const mapStateToProps = state=>{
+    const {isLeft} = state.cstmServiceReducer
+    return{
+	isLeft
+    }
+}
+export default connect(mapStateToProps)(CstmService)

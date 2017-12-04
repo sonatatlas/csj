@@ -1,9 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import Tabs from './tabs'
-import Search from './search'
-import Ctn from './ctn'
 
 import {
     TouchableWithoutFeedback,
@@ -11,13 +8,14 @@ import {
 }from 'react-native'
 
 import s from './style.js'
+import Tabs from './tabs'
+import Ctn from './ctn'
 
-const CstmService = ({p}) => (
-	<TouchableWithoutFeedback onPress={p.dsms}><View style={s.ctnr}>
+const CstmService = ({dsms, isLeft, switchAccessTab}) => (
+	<TouchableWithoutFeedback onPress={dsms}><View style={s.ctnr}>
 	<StatusBar barStyle="light-content"/>
-	<Tabs />
-	<Search />
-	<Ctn />
+	<Tabs isLeft={isLeft} switchAccessTab={switchAccessTab}/>
+	<Ctn isLeft={isLeft}/>
 	</View></TouchableWithoutFeedback>
 );
 

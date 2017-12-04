@@ -5,10 +5,10 @@ import ShowBar from './showbar'
 import Modules from './modules'
 import s from './style.js'
 
-const Workbench = () => (
+const Workbench = ({navigate}) => (
 	<View style={s.ctnr}>
-	<ShowBar />
-	<Modules />
+	<ShowBar navigate={navigate} />
+	<Modules navigate={navigate} />
 	</View>
 );
 

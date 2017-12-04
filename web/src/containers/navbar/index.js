@@ -3,21 +3,14 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 //actions
-import {
-    toggleNavBar,showLogin,tapLogin,toggleQRcode
-} from '../../actions/navbar'
-import $ from 'jquery'
+import {toggleNavBar} from '../../actions/navbar'
+import {toggleLogin,toggleQRcode} from '../../actions/account'
 
 //components
 import NavBarModel from '../../components/navbar'
+import LoginContainer from '../account/login'
+import QRcode from '../account/qrcode'
 
-
-import createHistory from 'history/createBrowserHistory'
-const history = createHistory()
-const gobbg = ()=>{
-    history.push('/items')
-    history.go()
-}
 
 class NavBar extends Component {
     static propTypes = {
@@ -25,38 +18,27 @@ class NavBar extends Component {
 	dispatch : PropTypes.func.isRequired
     }
     render() {
-	const {dispatch,isOpen,isLogin,isShownLogin,isQRcode} = this.props
-	const open =()=>{dispatch(toggleNavBar(!isOpen))}
-	const qrcode = ()=>{dispatch(toggleQRcode(!isQRcode))}
-	const completeLogin =(e)=>{
-	    var params = e.serializeArray()
-	    var values = {};  
-            for( var x in params ){  
-		values[params[x].name] = params[x].value;  
-            }
-	    $.post("http://localhost:6262/offical/login",values)
-		.then((res)=>{
-		    res.stat?
-			gobbg():
-			alert('账号或密码错误')
-		})
-	}
-	const login =()=>{dispatch(showLogin(!isShownLogin))}
-	const p ={
-	    open,isOpen,login,isLogin,isShownLogin,completeLogin,isQRcode,qrcode
-	}
+	const {dispatch,isOpen,isLogin,isQRcode } = this.props
 	return (
 		<div>
-		<NavBarModel p={p}/>
+		<LoginContainer />
+		<QRcode />
+		<NavBarModel
+	    isOpen={isOpen}
+	    toggle={()=>dispatch(toggleNavBar(!isOpen))}	    
+	    toggleLogin={()=>dispatch(toggleLogin(!isLogin))}
+	    toggleQRcode = {()=>dispatch(toggleQRcode(!isQRcode))}
+		/>
 		</div>
 	);
     }
 }
 
 const mapStateToProps = state => {
-    const { isOpen,isLogin,isShownLogin, isQRcode } = state.navbarReducer
+    const { isOpen } = state.navbarReducer
+    const { isLogin,isQRcode } = state.accountReducer
     return {
-	isOpen,isLogin,isShownLogin,isQRcode
+	isOpen,isLogin,isQRcode
     }    
 }
 

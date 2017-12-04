@@ -1,13 +1,11 @@
-import React,{Component} from 'react';
+import React from 'react';
+import { View, Text } from 'react-native';
 
-import AppComponent from '../../components/app'
 
-class App extends Component{
-    render(){
-	return(
-	    <AppComponent />
-	)
-    }
-}
+const Mine = () => (
+  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <Text>Home Screen</Text>
+  </View>
+);
 
-export default App
+export default Mine

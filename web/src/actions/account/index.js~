@@ -1,0 +1,10 @@
+
+
+export const TOGGLELOGIN = 'TOGGLELOGIN'
+
+
+export const toggleLogin = reddit =>({
+    type: TOGGLELOGIN,
+    reddit
+})
+
