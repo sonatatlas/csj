@@ -41,7 +41,7 @@ const style = StyleSheet.create({
     },
     cdsm:{
 	color:'#eee',
-	fontSize:9*w,
+	fontSize:12*w,
 	textAlign:'center'
     },
     cdid:{

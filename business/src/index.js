@@ -1,27 +1,22 @@
 //App
 
-
 import React from 'react';
 import {connect} from 'react-redux'
 import RootNavigator from './containers/rootNavigator'
 import Login from './containers/login'
 import {tapLogin} from './actions/login'
 import {
-    View,
-    AsyncStorage,
+    View,AsyncStorage,
 }from 'react-native'
-
-
 class App extends React.Component {
     constructor(props){
 	super(props)
     }
-    componentWillMount(){
+    async componentWillMount(){
 	const {dispatch,isLogin} = this.props
 	const dir =(bool)=>{dispatch(tapLogin(bool))}
-	AsyncStorage.getItem('isLogin').then((item)=>{
-	    item?dir(true):dir(false)
-	})
+	const item = await AsyncStorage.getItem('isLogin')
+	item?dir(true):dir(false)
     }
 
     render() {

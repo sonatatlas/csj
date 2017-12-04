@@ -34,19 +34,16 @@ const prortgs = ds.cloneWithRows(prortg)
 
 const Mine = () => (
 	<ScrollView style={s.ctnr}>
-
 	<View style={s.sctnr} >
 	<Image style={s.shop} source={{uri: url+'/logo/logo.png'}}/>
 	<Text style={s.tf}>草市集</Text>
-	</View>
-	
+	</View>	
 	<View style={s.rtgbg}><View style={s.actnr} >
 	<Text style={s.tf}>头像</Text>	
 	<Image style={s.shop} source={{uri: url+'/logo/logo.png'}}/>
 	</View>
         <ListView
-    scrollEnabled={false}
-    dataSource={infortgs}
+    scrollEnabled={false} dataSource={infortgs}
     renderRow={(rowData) => <Item info={rowData}/>}
     contentContainerStyle={s.listViewStyle}
     removeClippedSubviews={false}
@@ -54,8 +51,7 @@ const Mine = () => (
 	
 	<View style={s.rtgbg}>
         <ListView
-    scrollEnabled={false}
-    dataSource={setrtgs}
+    scrollEnabled={false} dataSource={setrtgs}
     renderRow={(rowData) => <Item info={rowData}/>}
     contentContainerStyle={s.listViewStyle}
     removeClippedSubviews={false}
@@ -63,8 +59,7 @@ const Mine = () => (
 
     	<View style={s.rtgbg}>
         <ListView
-    scrollEnabled={false}
-    dataSource={prortgs}
+    scrollEnabled={false} dataSource={prortgs}
     renderRow={(rowData) => <Item info={rowData}/>}
     contentContainerStyle={s.listViewStyle}
     removeClippedSubviews={false}

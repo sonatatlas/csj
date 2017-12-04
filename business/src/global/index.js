@@ -1,14 +1,13 @@
 import {Dimensions} from 'react-native'
 
 
-export const url = "http://192.168.1.105:6262"
-export const h = Dimensions.get('window').height/100
-export const w = Dimensions.get('window').width/100
-export const color = '#1296db'
-
-export const style={
+export const url = 'http://192.168.1.105:6262'
+export const w = Dimensions.get('window').width
+export const h = Dimensions.get('window').height
+export const color = '#4283a1'
+export const style = {
     icon:{
-	height:3.3*h,
-	width:3.3*h
+	width:22,
+	height:22
     }
 }

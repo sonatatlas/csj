@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux'
-import {url,style,color,w} from '../../../global'
 import PmanagerModel from '../../../components/workbench/pages/pmanager'
 import {
     Keyboard,Image,View,TouchableOpacity
@@ -14,7 +13,7 @@ const Back = ({navigation})=>(
 	<TouchableOpacity
     onPress = {()=>navigation.goBack()}
 	><Image
-    source={{uri: url+'/icon/back.png'}}
+    source={require('../../icon/header/back.png')}
     style={{height:8*w,width:8*w,marginLeft:6}}
 	/></TouchableOpacity>)
 

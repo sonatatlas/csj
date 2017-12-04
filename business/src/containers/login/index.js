@@ -4,7 +4,6 @@
 import React,{Component} from 'react'
 import LoginComponent from '../../components/login'
 import {connect} from 'react-redux'
-import {url} from '../../global'
 import {tapLogin} from '../../actions/login'
 
 import {

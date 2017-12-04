@@ -1,0 +1,13 @@
+
+// header search model
+
+import React,{Component} from 'react'
+import {
+    View,Text
+}from 'react-native'
+
+const MessageModel = ()=>(
+    <View><Text>im message model</Text></View>
+)
+
+export default MessageModel

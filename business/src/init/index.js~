@@ -1,0 +1,6 @@
+
+import {Platform} = React
+
+const Platform = Platform.OS
+
+console.log(Platform)

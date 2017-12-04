@@ -19,6 +19,8 @@ const moduleList = [{
 },{
     label:'数据统计',icon:url+'/b/workbench/statistics.png',isnew:'',jump:'Statitics'
 },{
+    label:'打理店铺',icon:url+'/b/workbench/shop.png',isnew:'new'
+},{
     label:'分销商城',icon:url+'/b/workbench/dispatch.png',isnew:'new'
 }]
 		    

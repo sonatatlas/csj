@@ -7,7 +7,7 @@ const style = StyleSheet.create({
 	flexDirection:'row',
 	justifyContent:'space-around',
 	alignItems:'center',
-	height:38*w,
+	height:128,
 	backgroundColor:color,
     },
     nctnr:{
@@ -18,11 +18,12 @@ const style = StyleSheet.create({
     },
     number:{
         color:'#eee',
-        fontSize:16*w,
+        fontSize:40,
+	margin:12
     },
     label:{
         color:'#eee',
-        fontSize:5*w
+        fontSize:16
     },
     listViewStyle:{
         flexDirection:'row',

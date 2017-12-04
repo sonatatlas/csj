@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native'
-import {h,w} from '../../../global'
+
 
 const style = StyleSheet.create({
     ctnr:{
@@ -8,8 +8,21 @@ const style = StyleSheet.create({
 	alignItems:'center',
 	backgroundColor:'#fff'
     },
+    tiw:{
+	display:'flex',
+	marginTop:8,
+        width:90,
+        backgroundColor:'#ececec',
+        borderRadius:5
+    },
+    ti:{
+        fontSize:15,
+	margin:8,
+	color:'#999',
+        marginLeft:3
+    },    
     sf:{
-	fontSize:18,
+	fontSize:15,
 	color:'#aaa'
     },
     tb:{
@@ -19,8 +32,8 @@ const style = StyleSheet.create({
 	alignItems:'center'
     },
     btn:{
-	width:30*w,
-	height:10*w,	
+	width:128,
+	height:36,
         display:'flex',
 	justifyContent:'center',
 	alignItems:'center',

@@ -1,0 +1,26 @@
+import {StyleSheet} from 'react-native'
+import {h,w,color} from '../../../global'
+
+const style = StyleSheet.create({
+    tiw:{
+        marginLeft:12,
+        height:20,
+        width:150,
+        backgroundColor:'#ddd',
+        borderRadius:5
+    },
+    ti:{
+        height:20,
+        width:150,
+        fontSize:12,
+        marginLeft:12
+    },
+    cancel:{
+	fontSize:18,
+	color:color,
+	marginRight:12*w
+    }
+})
+
+
+export default style

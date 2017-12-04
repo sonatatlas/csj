@@ -16,7 +16,6 @@ const style = StyleSheet.create({
     },
     actnr:{
         display:'flex',
-	marginLeft:3.8*w,
         flexDirection:'row',
 	justifyContent:'space-between',
         alignItems: 'center',
@@ -41,7 +40,8 @@ const style = StyleSheet.create({
 
     },
     tf:{
-	fontSize:5*w
+	fontSize:5*w,
+	marginLeft:3.8*w
     },
     extra:{
 	margin:4.2*w,

@@ -1,0 +1,9 @@
+import {StyleSheet} from 'react-native'
+
+const style = StyleSheet.create({
+    ctnr:{
+	display:'flex',
+	justifyContent:'center',
+	alignItems:'center'
+    }
+})
