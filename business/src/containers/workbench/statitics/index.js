@@ -2,25 +2,29 @@ import React,{Component} from 'react';
 import {connect} from 'react-redux'
 import StatiticsModel from '../../../components/workbench/pages/statitics'
 import {
-    Keyboard,Image,View,TouchableOpacity
+    Keyboard,Image,View,TouchableOpacity,Text
 } from 'react-native'
-
+import {css} from 'init'
 
 const Back = ({navigation})=>(
 	<TouchableOpacity
     onPress = {()=>navigation.goBack()}
 	><Image
     source={require('../../icon/header/back.png')}
-    style={{height:20,width:20,marginLeft:12}}
+    style={[css.headerIcon,{height:24}]}
 	/></TouchableOpacity>)
+
+const HEADER = ()=>(<Text
+		    allowFontScaling={false}
+		    style={{color:css.dark,fontSize:css.f2}}
+		    >数据统计</Text>)
 
 class Statitics extends Component{
     static navigationOptions = ({navigation})=>({
-	title:"数据统计",
-        headerTitleStyle:{color:'#707070',fontSize:22},
-        headerStyle:{backgroundColor:'#fff'},
+	headerTitle:<HEADER />,
+        headerStyle:{backgroundColor:css.light},
 	headerLeft:<Back navigation={navigation}/>,
-	headerBackTitleStyle:{color:'#eee'}
+	headerBackTitleStyle:{color:css.light}
     })
     render(){
 	return(

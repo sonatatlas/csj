@@ -10,7 +10,7 @@ import s from './style'
 
 const MessageModel = ()=>(
 	<View style={s.ctnr}>
-	<Text style={s.sf}>暂时没有新的消息</Text>
+	<Text allowFontScaling={false} style={s.sf}>暂时没有新的消息</Text>
 	</View>
 )
 

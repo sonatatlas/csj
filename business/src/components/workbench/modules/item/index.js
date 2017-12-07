@@ -11,7 +11,7 @@ const Item = ({info,navigate})=>(
 	<TouchableOpacity style={s.nctnr}
     onPress={()=>{navigate(info.jump)}}>
 	<Image style={s.icon} source={{uri:info.icon}}/>
-	<Text style={s.label}>{info.label}</Text>
+	<Text allowFontScaling={false} style={s.label}>{info.label}</Text>
 	</TouchableOpacity>
 )
 

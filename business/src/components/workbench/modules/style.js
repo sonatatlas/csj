@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native'
-
+import {css,deviceWidth} from 'init'
 
 const style = StyleSheet.create({
     ctnr:{
@@ -12,20 +12,20 @@ const style = StyleSheet.create({
         display:'flex',
         justifyContent:'center',
         alignItems:'center',
-	height:33,
-	width:33,
+	width:deviceWidth/3,
+	height:deviceWidth/3,
 	backgroundColor:'#fff',
 	borderColor:'#eee',
 	borderWidth:1
     },
     icon:{
-	height:12,
-	width:12
+	height:40,
+	width:40
     },
     label:{
-	marginTop:4,
-        color:'#999',
-        fontSize:5
+	marginTop:12,
+        color:css.dark,
+        fontSize:css.f1*12/14
     },
     listViewStyle:{
 	flexDirection:'row',  

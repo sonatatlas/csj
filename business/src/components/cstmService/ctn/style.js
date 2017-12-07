@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native'
-
+import  {css,deviceWidth} from 'init'
 
 const style = StyleSheet.create({
     ctnr:{
@@ -10,19 +10,19 @@ const style = StyleSheet.create({
     },
     tiw:{
 	display:'flex',
-	marginTop:8,
-        width:90,
+	marginTop:12,
+        width:0.9*deviceWidth,
         backgroundColor:'#ececec',
         borderRadius:5
     },
     ti:{
-        fontSize:15,
-	margin:8,
+        fontSize:css.f1,
+	margin:12,
 	color:'#999',
         marginLeft:3
     },    
     sf:{
-	fontSize:15,
+	fontSize:css.f1,
 	color:'#aaa'
     },
     tb:{

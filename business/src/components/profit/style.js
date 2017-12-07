@@ -1,6 +1,6 @@
 //cstmService.js
 import {StyleSheet} from 'react-native'
-
+import {css,deviceWidth} from 'init'
 
 const style = StyleSheet.create({
     ctnr:{
@@ -13,16 +13,16 @@ const style = StyleSheet.create({
         backgroundColor:'#fff',
     },
     label:{
-	marginLeft:3.8,
-	marginTop:3.2,
-	marginBottom:1.2,
-	fontSize:5,
+	marginLeft:12,
+	marginTop:12,
+	marginBottom:5,
+	fontSize:css.f2,
 	color:'#333'
     },
     info:{
-	marginLeft:3.8,
-	marginBottom:3.2,	
-	fontSize:3.8,	
+	marginLeft:12,
+	marginBottom:12,	
+	fontSize:css.f1/14*12,	
 	color:'#666'
     },
     listViewStyle:{
@@ -30,49 +30,50 @@ const style = StyleSheet.create({
     },
     cdbg:{
 	backgroundColor:'#4283a1',
-	height:38,
+	height:45*deviceWidth/100,
 	display:'flex',
 	justifyContent:'space-around'
     },
     cdhd:{
-	marginLeft:3.8,
+	marginLeft:12,
 	color:'#eee',
-	fontSize:3.8
+	fontSize:css.f1
     },
     cdsm:{
 	color:'#eee',
-	fontSize:12,
+	fontSize:css.f1/14*36,
 	textAlign:'center'
     },
     cdid:{
-	marginLeft:3.8,
-	fontSize:5,
+	marginLeft:12,
+	fontSize:css.f1,
 	color:'#eee',	
     },
     wdbg:{
 	display:'flex',
 	justifyContent:'center',
 	alignItems:'center',
-	height:20,
+	height:deviceWidth/100*20,
 	backgroundColor:'#fff',
-	marginBottom:3.8
+	marginBottom:12
     },
     wdbtn:{
-	backgroundColor:'#4283a1',
+	backgroundColor:css.color,
 	display:'flex',
 	justifyContent:'center',
-	width:20,
-	height:8,
+	width:css.f1/14*56,
 	borderRadius:5,
-	marginBottom:1
+	marginBottom:5
     },
     wdtext:{
 	textAlign:'center',
-	fontSize:5,
+	margin:5,
+	fontSize:css.f2,
 	color:'#eee',
     },
     wdinfo:{
-	fontSize:3,
+	marginTop:12,
+	fontSize:css.f1,
 	color:'#999'	
     }
 })

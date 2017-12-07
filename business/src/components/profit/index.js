@@ -29,12 +29,12 @@ const Statitics = () => (
 	<View >
 	<StatusBar barStyle="light-content" />
 	<View style={s.cdbg} >
-	<Text style={s.cdhd}>用户可用余额</Text>
-	<Text style={s.cdsm}>130,000</Text>
-	<Text style={s.cdid}>20171231</Text></View>
+	<Text allowFontScaling={false} style={s.cdhd}>用户可用余额</Text>
+	<Text allowFontScaling={false} style={s.cdsm}>130,000</Text>
+	<Text allowFontScaling={false} style={s.cdid}>20171231</Text></View>
 	<View style={s.wdbg}><TouchableOpacity style={s.wdbtn}>
-	<Text style={s.wdtext}>提现</Text>
-	</TouchableOpacity><Text style={s.wzinfo}>12/31日可提现</Text></View>
+	<Text allowFontScaling={false} style={s.wdtext}>提现</Text>
+	</TouchableOpacity><Text allowFontScaling={false} style={s.wzinfo}>12/31日可提现</Text></View>
         <ListView
     scrollEnabled={false}
     dataSource={rtgs}

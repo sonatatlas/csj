@@ -1,11 +1,17 @@
-.jbt{
+
+.title{
+    margin-top:10rem;
+    margin-left:10rem;
+}
+.bg{
     display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    background-color:#828282;
-    height:50vh;
+    felx:1;
+    height:100vh;
     color:#eee;
+    height:35rem;
+    background:url('./bg.jpeg') no-repeat;
+    background-size:auto 100vw;
+    background-position:-10vw;
 }
 
 .jbt-foot{
@@ -34,3 +40,19 @@
     font-size:3vh;
     margin-top:6vh;
 }
+.mydiv{
+    background:red;
+    animation:myfirst 5s;
+    -moz-animation:myfirst 5s; /* Firefox */
+    -webkit-animation:myfirst 2s infinite; /* Safari and Chrome */
+    -webkit-animation-direction:alternate;    
+    -o-animation:myfirst 5s; /* Opera */
+}
+
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+    from {font-size:12rem;}
+    to {font-size:15rem;}
+}
+

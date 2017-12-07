@@ -1,28 +1,11 @@
 
 .navbar {
-    height: 5vw;
-    background-color: #fcfcfc;
-    font-size: 2vh;
+    position:absolute;
+
     font-family: "Noto Sans CJK SC", "Source Han Sans CN", sans-serif;
-    box-shadow: 0.5vh 0.1vh 8px #888888;
-}
-.navbar-toggler{
-    margin-left:80vw;
-    height:3vw;
 }
 
-.navbar-toggler-icon{
-    height:0vw;
-    opacity:0;
-}
-.navbar-collapse{
-    justify-content:center;
-    align-items:flex-end;
-}
-
-..nav-link{
-    text-align:center
-}
 .logo{
-    height:3.3vh;
+    resizeModel:'contain';
+    height:2rem;
 }

@@ -5,22 +5,22 @@ import React from 'react';
 import {
     View, Text,ListView
 } from 'react-native';
-
+import {SERVER} from 'init'
 import Item from './item'
 import s from './style'
 const url = 'a'
 const moduleList = [{
-    label:'订单管理', icon:url+'/b/workbench/order.png',isnew:'',jump:'Omanager'
+    label:'订单管理', icon:SERVER+'/b/workbench/order.png',isnew:'',jump:'Omanager'
 },{
-    label:'维权管理', icon:url+'/b/workbench/protect.png',isnew:'',jump:'Pmanager'    
-},{    
-    label:'商品管理', icon:url+'/b/workbench/items.png',isnew:'',jump:'Imanager'
-},{
-    label:'数据统计',icon:url+'/b/workbench/statistics.png',isnew:'',jump:'Statitics'
-},{
-    label:'打理店铺',icon:url+'/b/workbench/shop.png',isnew:'new'
-},{
-    label:'分销商城',icon:url+'/b/workbench/dispatch.png',isnew:'new'
+    label:'维权管理', icon:SERVER+'/b/workbench/protect.png',isnew:'',jump:'Pmanager'    
+},{    			   
+    label:'商品管理', icon:SERVER+'/b/workbench/items.png',isnew:'',jump:'Imanager'
+},{			   
+    label:'数据统计',icon:SERVER+'/b/workbench/statistics.png',isnew:'',jump:'Statitics'
+},{			   
+    label:'打理店铺',icon:SERVER+'/b/workbench/profit.png',isnew:'new'
+},{			   
+    label:'分销商城',icon:SERVER+'/b/workbench/dispatch.png',isnew:'new'
 }]
 		    
   

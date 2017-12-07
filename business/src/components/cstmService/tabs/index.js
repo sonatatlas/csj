@@ -21,10 +21,10 @@ const bf = (isLeft,left)=>isLeft?
 const Tabs = ({isLeft,switchAccessTab}) => (
 	<View style={s.ctnr}>
 	<View><TouchableOpacity onPress={()=>switchAccessTab(true)} style={s.btn}>
-	<View style={tw(isLeft,true)}><Text style={bf(isLeft,true)}>已接入(0)</Text></View>
+	<View style={tw(isLeft,true)}><Text allowFontScaling={false} style={bf(isLeft,true)}>已接入(0)</Text></View>
 	</TouchableOpacity></View>
 	<View><TouchableOpacity onPress={()=>switchAccessTab(false)} style={s.btn}>
-	<View style={tw(isLeft,false)}><Text style={bf(isLeft,false)}>等待接入(0)</Text></View>
+	<View style={tw(isLeft,false)}><Text allowFontScaling={false} style={bf(isLeft,false)}>等待接入(0)</Text></View>
 	</TouchableOpacity></View>	
 	</View>
 );

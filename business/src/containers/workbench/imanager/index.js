@@ -2,18 +2,18 @@ import React,{Component} from 'react';
 import {connect} from 'react-redux'
 import ImanagerModel from '../../../components/workbench/pages/imanager'
 import {
-    Keyboard,Image,View,TouchableOpacity
+    Keyboard,Image,View,TouchableOpacity,Text
 } from 'react-native'
 
 import {switchImanagerTab} from '../../../actions/cstmService'
-
+import {css} from 'init'
 
 const Back = ({navigation})=>(
 	<TouchableOpacity
     onPress = {()=>navigation.goBack()}
 	><Image
     source={require('../../icon/header/back.png')}
-    style={{height:20,width:20,marginLeft:12}}
+    style={[css.headerIcon,{height:24}]}
 	/></TouchableOpacity>)
 
 const Right = ({navigation})=>(
@@ -21,19 +21,24 @@ const Right = ({navigation})=>(
     onPress = {()=>navigation.navigate('Search')}
 	><Image
     source={require('../../icon/header/search.png')}
-    style={{height:20,width:20,marginRight:12}}
+    style={css.headerIcon}
 	/></TouchableOpacity>)
+
+const HEADER = ()=>(<Text
+                    allowFontScaling={false}
+                    style={{color:css.dark,fontSize:css.f2}}
+                    >商品管理</Text>)
+
+
 
 const dsms =()=>Keyboard.dismiss()
 
 class Imanager extends Component{
     static navigationOptions = ({navigation})=>({
-	title:'商品管理',
-        headerTitleStyle:{color:'#707070',fontSize:22},
-        headerStyle:{backgroundColor:'#fff'},
+	headerTitle:<HEADER />,
+        headerStyle:{backgroundColor:css.light},
 	headerLeft:<Back navigation={navigation}/>,
 	headerRight:<Right navigation={navigation}/>,	
-	headerBackTitleStyle:{color:'#eee'}
     })
     render(){
 	const {imanagerTab,dispatch} = this.props

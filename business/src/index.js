@@ -8,9 +8,11 @@ import {tapLogin} from './actions/login'
 import {
     View,AsyncStorage,
 }from 'react-native'
+
 class App extends React.Component {
     constructor(props){
 	super(props)
+	global.a='a'
     }
     async componentWillMount(){
 	const {dispatch,isLogin} = this.props

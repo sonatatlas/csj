@@ -1,6 +1,6 @@
 //cstmService.js
 import {StyleSheet} from 'react-native'
-
+import {css} from 'init'
 const style = StyleSheet.create({
     ctnr:{
 	display:'flex',
@@ -29,22 +29,22 @@ const style = StyleSheet.create({
 	borderBottomWidth:-1
     },
     shop:{
-	height:15,
-	width:15,
+	height:48,
+	width:48,
 	borderWidth:0.1,
 	borderColor:'#aaa',
 	borderRadius:5,
 	resizeMode:'contain',
-	margin:4.2
+	margin:12
 
     },
     tf:{
-	fontSize:5,
-	marginLeft:3.8
+	fontSize:css.f2,
+	marginLeft:12
     },
     extra:{
-	margin:4.2,
-	fontSize:3.8,
+	margin:12,
+	fontSize:css.f2,
 	color:'#666'
     },
     listViewStyle:{
@@ -59,9 +59,9 @@ const style = StyleSheet.create({
 	backgroundColor:'#fff'
     },
     btnf:{
-	margin:5,
-	fontSize:5,
-	color:'#4283a1'
+	margin:12,
+	fontSize:css.f2,
+	color:css.color
     }
 })
 

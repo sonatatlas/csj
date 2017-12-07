@@ -1,12 +1,12 @@
 
 import {
-    Platform, PixelRatio, Dimensions,AsyncStorage
+    Platform, PixelRatio, Dimensions,AsyncStorage,StyleSheet
 } from 'react-native'
 
 const deviceWidth = Dimensions.get('window').width
 const deviceHeight = Dimensions.get('window').height
 
-export const resizeScale = ()=>{
+const resizeScale = ()=>{
     if (PixelRatio.get() === 2){
 	if (deviceWidth < 360) {
 	    return 0.95
@@ -21,13 +21,44 @@ export const resizeScale = ()=>{
     }
 }
 
-export const fs = ()=> Platform.OS ==='ios'?
+const fs = ()=> Platform.OS ==='ios'?
     resizeScale():
-    PixelRatio.get()/PixelRatio.getFontScale()
+      PixelRatio.get()/PixelRatio.getFontScale()
 
-AsyncStorage.setItem('fts',fs().toString())
-AsyncStorage.setItem('url','http://192.168.1.105:6262')
+const SERVER = 'http://wanxiaoo.cn:6262'
+
+const color = '#4283a1'
+
+const css ={
+    color:'#4283a1',
+    dark: '#666',
+    light:'#fff',
+    f1:14*fs(),
+    f2:16*fs(),
+    f3:36*fs(),
+    tabIcon : {
+	width:22,
+	height:22
+    },
+    headerIcon:{
+	margin:12,
+	height:20,
+	width:20
+    },
+    backIcon:{
+	margin:12,
+	height:30,
+	width:20
+    },    
+    workbenchIcon:{
+	width:32,	
+	height:32
+    }
+}
 
 
 
 
+module.exports={
+    deviceWidth,css,SERVER
+}
