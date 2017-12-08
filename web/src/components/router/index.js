@@ -8,8 +8,7 @@ const MyRouter = ({Containers})=>(
         <Router>
 	<div >
         <Route exact path="/" component={Containers.Home}/>
-        <Route path="/intro" component={Containers.Intro}/>
-        <Route path="/items" component={Containers.Items}/>	
+        <Route path="/home" component={Containers.Home}/>	
 	</div>
         </Router>
 )

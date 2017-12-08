@@ -3,13 +3,15 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 //actions
-import {toggleNavBar} from '../../actions/navbar'
+import {toggleNavBar,scrollWindow} from '../../actions/navbar'
 import {toggleLogin,toggleQRcode} from '../../actions/account'
 
 //components
 import NavBarModel from '../../components/navbar'
-import LoginContainer from '../account/login'
 import QRcode from '../account/qrcode'
+import $ from 'jquery'
+
+
 
 
 class NavBar extends Component {
@@ -18,15 +20,24 @@ class NavBar extends Component {
 	dispatch : PropTypes.func.isRequired
     }
     render() {
-	const {dispatch,isOpen,isLogin,isQRcode } = this.props
+	const {dispatch, isOpen, navStat, isQRcode } = this.props
+	$(window).scroll(()=>{
+	    $(document).scrollTop()===0?
+		dispatch(scrollWindow(1)):dispatch(scrollWindow(2))
+	})
+	const currentStat = ()=>{
+	    if(navStat===1){
+		return{color:'faded',dark:true,light:false}
+	    }else{
+		return{color:'white',dark:false,light:true}
+	    }
+	}
 	return (
 		<div>
-		<LoginContainer />
 		<QRcode />
 		<NavBarModel
-	    isOpen={isOpen}
+	    isOpen={isOpen} navStat = {currentStat}
 	    toggle={()=>dispatch(toggleNavBar(!isOpen))}	    
-	    toggleLogin={()=>dispatch(toggleLogin(!isLogin))}
 	    toggleQRcode = {()=>dispatch(toggleQRcode(!isQRcode))}
 		/>
 		</div>
@@ -35,10 +46,10 @@ class NavBar extends Component {
 }
 
 const mapStateToProps = state => {
-    const { isOpen } = state.navbarReducer
-    const { isLogin,isQRcode } = state.accountReducer
+    const { isOpen, navStat } = state.navbarReducer
+    const { isQRcode } = state.accountReducer
     return {
-	isOpen,isLogin,isQRcode
+	isOpen,isQRcode,navStat
     }    
 }
 

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import {
-    TOGGLE
+    TOGGLE,SCROLL
 } from '../../actions/navbar'
 
 
@@ -13,9 +13,17 @@ const isOpen = (state=false, action)=>{
 	return state
     }
 }
+const navStat = (state=1,action)=>{
+    switch(action.type){
+    case SCROLL:
+	return action.reddit
+    default:
+	return state
+    }
+}
 
 const navbarReducer = combineReducers({
-    isOpen
+    isOpen,navStat
 })
 
 export default navbarReducer

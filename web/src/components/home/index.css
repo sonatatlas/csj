@@ -1,45 +1,72 @@
 
-.title{
-    margin-top:10rem;
-    margin-left:10rem;
-}
 .bg{
-    display:flex;
-    felx:1;
     height:100vh;
+    width:100vw;
+    display:flex;
+    flex-direction:column;
     color:#eee;
-    height:35rem;
     background:url('./bg.jpeg') no-repeat;
-    background-size:auto 100vw;
-    background-position:-10vw;
+    background-size:auto 110%;
+    background-position: 49% 0;
+    overflow:-Scroll;
+    overflow-x:hidden;
+    animation: bg 10s;
+    -moz-animation: bg 10s infinite alternate;	/* Firefox */
+    -webkit-animation: bg 10s  infinite alternate;	/* Safari 和 Chrome */
+    -o-animation: bg 10s infinite alternate;	/* Opera */
+}
+
+.title{
+    margin-top:12rem;
+    margin-left:8rem;
+    height:75vh;
+}
+
+.btn{
+    font-size:0.9rem!important;
+    width:10rem;
+    height:3rem;
+    margin-top:5rem;
+    margin-right:5rem;
+    border-radius:0!important;
+    font-weight:300!important;
 }
 
 .jbt-foot{
-    font-weight:normal;
+    height:25vh;
     display:flex;
     justify-content:center;
-    align-items:center;    
-    background-color:#454545;
-    height:20vh;
-    color:#fff
+    align-items:center;
+    align-self:end;
+    background-color: rgba(65,77,77,0.5);
+    width:100%;
+    color:#fff;
 }
 
 .space-font{
-    font-size:4vh;
+    font-size:1rem;
     padding: 0 3vw;
     border-right:2px solid white;
 }
 
 .sf-last{
-    font-size:4vh;
+    font-size:1remvh;
     padding:3vw;
 }
 
 .ft-intro{
     text-align:center;
     font-size:3vh;
-    margin-top:6vh;
+    margin:6vh;
 }
+
+.intro{
+    resize-model:contain;
+    margin-left:-1vw;
+    width:101%;
+    overflow-x: hidden;
+}
+
 .mydiv{
     background:red;
     animation:myfirst 5s;
@@ -50,9 +77,32 @@
 }
 
 
-@-webkit-keyframes myfirst /* Safari and Chrome */
+@-webkit-keyframes bg /* Safari and Chrome */
 {
-    from {font-size:12rem;}
-    to {font-size:15rem;}
+    from {background-size:auto 100%;}
+    to {background-size:auto 110%;}
 }
 
+@keyframes myfirst
+{
+    from {background-size:auto 100%;}
+    to {background-size:auto 110%;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+    from {background-size:auto 100%;}
+    to {background-size:auto 110%;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+    from {background-size:auto 100%;}
+    to {background-size:auto 110%;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+    from {background-size:auto 100%;}
+    to {background-size:auto 110%;}
+}

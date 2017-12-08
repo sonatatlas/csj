@@ -1,11 +1,15 @@
 
 .navbar {
     position:absolute;
-
     font-family: "Noto Sans CJK SC", "Source Han Sans CN", sans-serif;
 }
 
+.nav-link{
+    font-size:0.9rem;
+}
+
 .logo{
-    resizeModel:'contain';
+    margin-bottom:0.2rem;
+    resizeModel:contain;
     height:2rem;
 }

@@ -3,6 +3,7 @@ export const TOGGLE = 'TOGGLE'
 export const LOGIN = 'LOGIN'
 export const SHOWLOGIN = 'SHOWLOGIN'
 export const SETUP = 'SETUP'
+export const SCROLL = 'SCROLL'
 
 export const toggleNavBar = reddit =>({
     type: TOGGLE,
@@ -21,5 +22,10 @@ export const showLogin = reddit =>({
 
 export const toggleQRcode = reddit =>({
     type: SETUP,
+    reddit
+})
+
+export const scrollWindow = reddit =>({
+    type: SCROLL,
     reddit
 })
