@@ -6,7 +6,7 @@ import "./index.css"
 
 import Intro from './intro'
 
-const HomeModel = ({qrcode})=>(
+const HomeModel = ({qrcode,shopcode})=>(
 	<div>
 	
 	<div className="bg"><div className='title' >
@@ -14,7 +14,7 @@ const HomeModel = ({qrcode})=>(
 	<h5 className="font-weight-light">草市集，精品的电商平台</h5>
 	<div className="btn-wrap">
 	<Button color="primary" onClick={qrcode}>我要开店</Button>
-	<Button style={{backgroundColor:'transparent'}}>商家入驻</Button>	
+	<Button onClick={shopcode} style={{backgroundColor:'transparent'}}>商家入驻</Button>	
 	</div>
 	</div>
 	<div className="jbt-foot">

@@ -1,23 +1,26 @@
 import React,{Component} from 'react'
 
 import HomeModal from '../../components/home'
-import {toggleQRcode} from '../../actions/navbar'
+import {toggleQRcode,toggleShopCode} from '../../actions/navbar'
 import {connect} from 'react-redux'
 
 
 class Home extends Component{
     render(){
-	const {isQRcode,dispatch} = this.props	
+	const {isQRcode,isShopCode,dispatch} = this.props	
 	return(
-		<HomeModal qrcode={()=>dispatch(toggleQRcode(!isQRcode))}/>
+		<HomeModal
+	    qrcode={()=>dispatch(toggleQRcode(!isQRcode))}
+	    shopcode={()=>dispatch(toggleShopCode(!isShopCode))}	    
+		/>
 	)
     }
 }
 
 const mapStateToProps = state => {
-    const { isQRcode } = state.navbarReducer
+    const { isQRcode,isShopCode } = state.navbarReducer
     return {
-        isQRcode
+        isQRcode,isShopCode
     }
 }
 
