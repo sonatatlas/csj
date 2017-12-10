@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import {toggleQRcode} from '../../../actions/account'
 
 //components
-import QRcodeModel from '../../../components/account/qrcode'
+import QRcodeModel from '../../../components/modal/qrcode'
 
 
 
@@ -26,7 +26,7 @@ class QRcode extends Component {
 }
 
 const mapStateToProps = state => {
-    const { isQRcode } = state.accountReducer
+    const { isQRcode } = state.navbarReducer
     return { isQRcode }    
 }
 

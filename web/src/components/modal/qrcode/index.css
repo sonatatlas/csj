@@ -1,0 +1,12 @@
+
+.ctnr{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:30rem;
+}
+.qrcode{
+    width:12vw;
+    height:12vw;
+}

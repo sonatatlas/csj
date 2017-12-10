@@ -1,9 +1,10 @@
 import React from 'react'
 import {
-    Container,Jumbotron,Row,Col,Button
+    Col,Button
 } from 'reactstrap'
 import "./index.css"
 
+import Intro from './intro'
 
 const HomeModel = ({qrcode})=>(
 	<div>
@@ -27,7 +28,7 @@ const HomeModel = ({qrcode})=>(
 	</div>	
 	
 	<Col className="ft-intro">迄今为止，草市集已经帮助了10万个店主创立了自己的小程序店铺</Col>
-	<img name="intro" className="intro" src={require('./intro.png')}/>
+	<Intro />
 	</div>
 )
 

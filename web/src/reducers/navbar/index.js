@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import {
-    TOGGLE,SCROLL
+    TOGGLE, SCROLL, QRCODE, SHOPCODE
 } from '../../actions/navbar'
 
 
@@ -13,7 +13,7 @@ const isOpen = (state=false, action)=>{
 	return state
     }
 }
-const navStat = (state=1,action)=>{
+const navStat = (state=0,action)=>{
     switch(action.type){
     case SCROLL:
 	return action.reddit
@@ -22,8 +22,26 @@ const navStat = (state=1,action)=>{
     }
 }
 
+const isQRcode = (state=false, action)=>{
+    switch (action.type){
+    case QRCODE:
+        return action.reddit
+    default:
+        return state
+    }
+}
+
+const isShopCode = (state=false, action)=>{
+    switch (action.type){
+    case SHOPCODE:
+        return action.reddit
+    default:
+        return state
+    }
+}
+
 const navbarReducer = combineReducers({
-    isOpen,navStat
+    isOpen, isQRcode, navStat, isShopCode
 })
 
 export default navbarReducer

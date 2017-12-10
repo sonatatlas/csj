@@ -1,13 +1,9 @@
 import {combineReducers} from 'redux'
 
 import navbarReducer from './navbar'
-import itemReducer from './items'
-import accountReducer from './account'
-
+//import homeReducer from './home'
 
 const rootReducer = combineReducers({
-    navbarReducer,
-    itemReducer,
-    accountReducer,
+    navbarReducer
 })
 export default rootReducer

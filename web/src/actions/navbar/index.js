@@ -1,27 +1,21 @@
 
 export const TOGGLE = 'TOGGLE'
-export const LOGIN = 'LOGIN'
-export const SHOWLOGIN = 'SHOWLOGIN'
-export const SETUP = 'SETUP'
 export const SCROLL = 'SCROLL'
+export const QRCODE = 'QRCODE'
+export const SHOPCODE = 'SHOPCODE'
+
+export const toggleQRcode = reddit =>({
+    type: QRCODE,
+    reddit
+})
+
+export const toggleShopCode = reddit =>({
+    type: SHOPCODE,
+    reddit
+})
 
 export const toggleNavBar = reddit =>({
     type: TOGGLE,
-    reddit
-})
-
-export const tapLogin = reddit =>({
-    type:LOGIN,
-    reddit
-})
-
-export const showLogin = reddit =>({
-    type: SHOWLOGIN,
-    reddit
-})
-
-export const toggleQRcode = reddit =>({
-    type: SETUP,
     reddit
 })
 
@@ -29,3 +23,4 @@ export const scrollWindow = reddit =>({
     type: SCROLL,
     reddit
 })
+

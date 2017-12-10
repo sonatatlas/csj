@@ -1,5 +1,9 @@
 
+html,body{
+    overflow-x:hidden;
+}
 .bg{
+
     height:100vh;
     width:100vw;
     display:flex;
@@ -8,8 +12,6 @@
     background:url('./bg.jpeg') no-repeat;
     background-size:auto 110%;
     background-position: 49% 0;
-    overflow:-Scroll;
-    overflow-x:hidden;
     animation: bg 10s;
     -moz-animation: bg 10s infinite alternate;	/* Firefox */
     -webkit-animation: bg 10s  infinite alternate;	/* Safari 和 Chrome */
@@ -62,9 +64,7 @@
 
 .intro{
     resize-model:contain;
-    margin-left:-1vw;
-    width:101%;
-    overflow-x: hidden;
+    width:100vw;
 }
 
 .mydiv{

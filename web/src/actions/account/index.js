@@ -1,6 +1,5 @@
 
 
-export const TOGGLELOGIN = 'TOGGLELOGIN'
 export const QRCODE = 'QRCODE'
 
 
@@ -10,8 +9,4 @@ export const toggleQRcode = reddit =>({
 })
 
 
-export const toggleLogin = reddit =>({
-    type: TOGGLELOGIN,
-    reddit
-})
 

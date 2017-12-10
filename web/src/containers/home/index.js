@@ -1,11 +1,11 @@
 import React,{Component} from 'react'
 
 import HomeModal from '../../components/home'
-import {toggleQRcode} from '../../actions/account'
+import {toggleQRcode} from '../../actions/navbar'
 import {connect} from 'react-redux'
 
-class Home extends Component{
 
+class Home extends Component{
     render(){
 	const {isQRcode,dispatch} = this.props	
 	return(
@@ -15,7 +15,7 @@ class Home extends Component{
 }
 
 const mapStateToProps = state => {
-    const { isQRcode } = state.accountReducer
+    const { isQRcode } = state.navbarReducer
     return {
         isQRcode
     }

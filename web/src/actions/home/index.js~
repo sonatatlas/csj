@@ -1,0 +1,8 @@
+
+const SCROLL = 'INTRO'
+
+export const scrollToINTRO = reddit =>({
+    type: INTRO,
+    reddit
+})
+
