@@ -2,25 +2,28 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-const HomeScreen = () => (
-  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-    <Text>Home Screen</Text>
-  </View>
-);
 
-const DetailsScreen = () => (
-  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-    <Text>Details Screen</Text>
-  </View>
-);
+import RootTabs from '../rootTabs'
+import OmanagerScreen from '../workbench/omanager'
+import ImanagerScreen from '../workbench/imanager'
+import PmanagerScreen from '../workbench/pmanager'
+import StatiticsScreen from '../workbench/statitics'
+import MessageScreen from '../header/message'
+import SearchScreen from '../header/search'
+import QRcodeScreen from '../header/qrcode'
+import RecordScreen from '../header/record'
+
 
 const RootNavigator = StackNavigator({
-  Home: {
-    screen: HomeScreen,
-  },
-  Details: {
-    screen: DetailsScreen,
-  },
+    Tabs:{screen: RootTabs},
+    Omanager:{screen: OmanagerScreen},
+    Imanager:{screen: ImanagerScreen},
+    Pmanager:{screen: PmanagerScreen},
+    Statitics:{screen: StatiticsScreen},
+    Message:{screen: MessageScreen},
+    QRcode:{screen: QRcodeScreen},        
+    Search:{screen: SearchScreen},
+    Record:{screen: RecordScreen}    
 });
 
 export default RootNavigator;

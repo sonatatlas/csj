@@ -1,15 +1,14 @@
 //login.js
 
-
-// PUT LOGIN
+const Account = require('../../mongo').Account
 
 const post =async ctx=>{
-    const body = ctx.request.body
-    if(body.account==="caoshiji666"&&body.psw==="caoshiji666"){
-	ctx.session.login = true
-	ctx.body={stat:true}
+    let body = ctx.request.body
+    let docs = await Account.findOne({tel: body.tel})
+    if(body.psw === docs.psw){
+	ctx.body = { verify : true }
     }else{
-	ctx.body={stat:false}
+	ctx.body = { verify : false }
     }
 	
 }

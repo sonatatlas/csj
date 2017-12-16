@@ -1,0 +1,23 @@
+import React from 'react';
+import {
+    TouchableWithoutFeedback,TouchableOpacity,
+    StatusBar,Alert,Text,View,
+}from 'react-native'
+
+
+import s from './style.js'
+import Cover from './cover'
+import Module from './module'
+
+const Imanager = ({dsms}) => (
+	<TouchableWithoutFeedback onPress={dsms}><View style={s.ctnr}>
+	<View style={s.tt}>
+	<Text style={s.lt}>您的店铺商业: 服饰行业</Text>
+	<TouchableOpacity style={s.btn}><Text style={s.ct}>删除此模块</Text></TouchableOpacity>
+	</View>
+	<Cover />
+	<Module title='折扣专区' />
+	</View></TouchableWithoutFeedback>
+);
+
+export default Imanager

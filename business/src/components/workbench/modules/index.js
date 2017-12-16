@@ -14,13 +14,13 @@ const moduleList = [{
 },{
     label:'维权管理', icon:SERVER+'/b/workbench/protect.png',isnew:'',jump:'Pmanager'    
 },{    			   
-    label:'商品管理', icon:SERVER+'/b/workbench/items.png',isnew:'',jump:'Imanager'
+    label:'商品管理', icon:SERVER+'/b/workbench/items.png',isnew:'',jump:'ItemCategory'
 },{			   
     label:'数据统计',icon:SERVER+'/b/workbench/statistics.png',isnew:'',jump:'Statitics'
 },{			   
-    label:'打理店铺',icon:SERVER+'/b/workbench/profit.png',isnew:'new'
+    label:'打理店铺',icon:SERVER+'/b/workbench/profit.png',isnew:'new',jump:'Renovate'
 },{			   
-    label:'分销商城',icon:SERVER+'/b/workbench/dispatch.png',isnew:'new'
+    label:'分销商城',icon:SERVER+'/b/workbench/dispatch.png',isnew:'new',jump:'Store'
 }]
 		    
   

@@ -1,38 +1,38 @@
 import {StyleSheet} from 'react-native'
+import {css,deviceWidth} from 'init'
 
 const style = StyleSheet.create({
     ctnr:{
         display:'flex',
-	flexDirection:'row',
-	height:13,
-	backgroundColor:'#fff',
-	borderColor:'#ddd',
-	borderBottomWidth:0.1
+        flexDirection:'row',
+        height:36,
+        backgroundColor:'#fff',
+        borderColor:'#ddd',
+        borderBottomWidth:1
     },
     btn:{
-	display:'flex',
-	flex:1,
-	width:100/4,
-	justifyContent:'center',
-	alignItems:'center'
+        display:'flex',
+        width:deviceWidth/4,
+        flex:1,
+        justifyContent:'center',
+        alignItems:'center'
     },
     bfw:{
-	display:'flex',
-	justifyContent:'center',
-	paddingLeft:3.8,
-	paddingRight:3.8,	
-	flex:1,
+        display:'flex',
+        justifyContent:'center',
+        paddingLeft:12,
+        paddingRight:12,
+        flex:1,
     },
     bfwTap:{
-	borderBottomWidth:1.5,
-	borderColor:'#4283a1'
+        borderBottomWidth:2,
+        borderColor:'#68a8c8'
     },
     bf:{
-	fontSize:18,
-	color:'#707070'
+        fontSize:css.f4
     },
     bfTap:{
-	color:'#4283a1'
+        color:'#4283a1'
     }
 })
 

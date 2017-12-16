@@ -1,6 +1,7 @@
 
 //login css
 import {StyleSheet} from 'react-native'
+import {css} from 'init'
 
 const style = StyleSheet.create({
     ctnr:{
@@ -8,33 +9,29 @@ const style = StyleSheet.create({
 	justifyContent:'center',
 	alignItems:'center'
     },logo:{
-	height:20,
-	width:20,
-	marginTop:20,
-	
+	height:88,
+	width:88,
+	marginTop:168,	
     },tiw:{
-	height:10,
-	width:70,	
 	marginTop:10,
 	borderColor: '#999',	
 	borderBottomWidth: 1,		
-    },ti:{	
-	height:10,
-	width:70,
-	fontSize:6,
-	textAlign:'right',
-	paddingRight:2
-    },btn:{
-	width:70,
-	height:15,
+    },ti:{
+	height:30,
+	width:200,
 	marginTop:10,
-	backgroundColor:'#4283a1',
-	borderRadius:10,
+	fontSize:css.f1,
+    },btn:{
 	display:'flex',
 	justifyContent:'center',
-	alignItems:'center'
+	alignItems:'center',
+	width:200,
+	marginTop:30,
+	backgroundColor:css.color,
+	borderRadius:8,
     },fontl:{
-	fontSize:5,
+	margin:10,
+	fontSize:css.f1,
 	color:'#eee'
     },space:{
 	height:25,

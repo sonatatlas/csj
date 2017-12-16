@@ -1,6 +1,6 @@
 
 import {
-    Platform, PixelRatio, Dimensions,AsyncStorage,StyleSheet
+    Platform, PixelRatio, Dimensions, StyleSheet
 } from 'react-native'
 
 const deviceWidth = Dimensions.get('window').width
@@ -25,7 +25,7 @@ const fs = ()=> Platform.OS ==='ios'?
     resizeScale():
       PixelRatio.get()/PixelRatio.getFontScale()
 
-const SERVER = 'http://wanxiaoo.cn:6262'
+const SERVER = 'http://172.20.10.3:6262/business'
 
 const color = '#4283a1'
 
@@ -36,6 +36,8 @@ const css ={
     f1:14*fs(),
     f2:16*fs(),
     f3:36*fs(),
+    f4:12*fs(),
+    f5:10*fs(),
     tabIcon : {
 	width:22,
 	height:22

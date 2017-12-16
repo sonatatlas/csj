@@ -1,12 +1,15 @@
 //mine containers
 
 import React,{Component} from 'react';
+import { connect } from 'react-redux';
 import MineComponent from '../../components/mine'
 import {
-    Image, TouchableOpacity, Text
+    Image, TouchableOpacity, Text,
+    AsyncStorage, Alert
 } from 'react-native'
 import {css} from 'init'
 
+import { login } from '../../actions/login'
 
 const ICON = ({focused,tintColor})=>(
     focused?
@@ -16,10 +19,8 @@ const ICON = ({focused,tintColor})=>(
 
 const HEADER = ()=>(<Text
                     allowFontScaling={false}
-                    style={{color:css.light,fontSize:css.f2}}
-                    >我的</Text>)
-
-
+		    style={{color:css.light,fontSize:css.f2}}
+                    >管理</Text>)
 
 const Right = ({navigation})=>(
         <TouchableOpacity
@@ -32,16 +33,25 @@ const Right = ({navigation})=>(
 class Mine extends Component{
     static navigationOptions = ({navigation})=>({
 	headerTitle:<HEADER />,
-        headerStyle:{backgroundColor:css.color,borderBottomWidth:0},
-	headerRight: <Right navigation={navigation}/>,
+	headerRight:<Right navigation={navigation}/>,
+	headerStyle:{backgroundColor:css.color,borderBottomWidth:0},
         tabBarIcon:ICON
     })
+    _logOut = () =>{
+	let { dispatch } = this.props
+	AsyncStorage.removeItem('accountTel')
+	dispatch(login(false))
+	Alert.alert('退出成功!')
+    }
     render(){
 	return(
-	    <MineComponent />
+		<MineComponent logOut= {this._logOut}/>
 	)
     }
 }
 
+const mapStateToProps = state =>({
+    login : state.loginReducer
+})
 
-export default Mine
+export default connect(mapStateToProps)(Mine)

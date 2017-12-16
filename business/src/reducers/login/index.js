@@ -2,12 +2,21 @@
 
 
 import {combineReducers} from 'redux'
-import {LOGIN} from '../../actions/login'
+import { LOGIN, ACCOUNTANDPASSWD} from '../../actions/login'
 
 
-const isLogin=(state=false,action)=>{
+const loginState=(state=false,action)=>{
     switch(action.type){
-    case "LOGIN":
+    case LOGIN:
+	return action.reddit
+    default:
+	return state
+    }
+}
+
+const enterValue = (state={},action)=>{
+    switch(action.type){
+    case ACCOUNTANDPASSWD:
 	return action.reddit
     default:
 	return state
@@ -15,7 +24,7 @@ const isLogin=(state=false,action)=>{
 }
 
 const loginReducers = combineReducers({
-    isLogin
+    loginState, enterValue
 })
 
 export default loginReducers

@@ -1,4 +1,7 @@
 
+body{
+    font-family: PingFangSC, "Microsoft Yahei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif !important;
+}
 .navbar {
     position:absolute;
     font-family: "Noto Sans CJK SC", "Source Han Sans CN", sans-serif;

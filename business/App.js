@@ -6,20 +6,32 @@ import reducer from './src/reducers'
 import {createStore,applyMiddleware} from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
+import promise from 'redux-promise-middleware'
+
+import { AsyncStorage } from 'react-native'
+import {login} from './src/actions/login'
+
+const middleware = [ thunk, promise() ]
 
 const store = createStore(
     reducer,
-    applyMiddleware(thunk)
+    applyMiddleware(...middleware)
 )
+
+AsyncStorage.getItem('accountTel',(err,value)=>{
+    if(value){
+	store.dispatch(login({tel:value}))
+    }
+})
 
 export default class App extends React.Component {
     render() {
-      return (
-	      <Provider store={store}>
-	      <Csj />
-	      </Provider>
-      );
-  }
+	return (
+		<Provider store={store}>
+		<Csj />
+		</Provider>
+	);
+    }
 }
 
 

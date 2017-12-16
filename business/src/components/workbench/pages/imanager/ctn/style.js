@@ -1,33 +1,73 @@
 import {StyleSheet} from 'react-native'
-
+import {css} from 'init'
 const style = StyleSheet.create({
-    ctnr:{
-        display:'flex',
-	flex:1,
-	alignItems:'center',
-	backgroundColor:'#fff'
-    },
-    sf:{
-	fontSize:18,
-	color:'#aaa'
-    },
-    tb:{
+    ctn:{
 	display:'flex',
-	flex:1,
-	justifyContent:'center',
-	alignItems:'center'
+	flexDirection:'row',
+	backgroundColor:css.light,
+	borderBottomWidth:0.5,
+	borderColor:'#ddd',
+	paddingTop:5
+    },
+    left:{
+	display:'flex',
+	margin:10
+    },
+    img:{
+	width:108,
+	height:108
+    },
+    right:{
+	display:'flex',
+	width:230,
+	margin:10
+    },
+    title:{
+	fontSize:css.f1,
+    },
+    price:{
+	marginTop:3,
+	marginBottom:3,
+	fontSize:css.f1,
+	color:'red'
+    },
+    detailwrap:{
+	marginTop:10,
+	marginBottom:10
+    },
+    detail:{
+	display:'flex',
+	flexDirection:'row'
+    },
+    detailctn:{
+	width:'50%',
+	color:'#999',
+	fontSize:css.f4
+    },
+    btnwrap:{
+	display:'flex',
+	flexDirection:'row',
+	alignItems:'center',
+	justifyContent:'space-around',
+	backgroundColor:css.light
     },
     btn:{
-	width:30,
-	height:10,	
-        display:'flex',
+	margin:3,
+	width:css.deviceWidth/4
+    },
+    tabf:{
+	fontSize:css.f1,
+	margin:8
+    },
+    addItem:{
+	padding:5,
+	position:'absolute',
+	display:'flex',
 	justifyContent:'center',
 	alignItems:'center',
-	borderWidth:1,
-	borderColor:'#aaa',
-	borderRadius:5,
-	marginTop:30,
-	marginBottom:80
+	backgroundColor:css.light,
+	width:'100%',
+	bottom:0,
     }
 })
 

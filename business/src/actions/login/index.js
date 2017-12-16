@@ -1,6 +1,21 @@
-export const LOGIN = "LOGIN"
+import {
+    AsyncStorage
+} from 'react-native'
 
-export const tapLogin = reddit => ({
+
+export const LOGIN = "LOGIN"
+export const ACCOUNTANDPASSWD = "ACCOUNTANDPASSWD"
+
+
+export const login = reddit => ({
     type:LOGIN,
     reddit
 })
+
+export const valueInput = reddit => ({
+    type: ACCOUNTANDPASSWD,
+    reddit
+})
+
+
+

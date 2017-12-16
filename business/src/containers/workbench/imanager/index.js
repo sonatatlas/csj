@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {connect} from 'react-redux'
 import ImanagerModel from '../../../components/workbench/pages/imanager'
 import {
-    Keyboard,Image,View,TouchableOpacity,Text
+    Image,View,TouchableOpacity,Text
 } from 'react-native'
 
 import {switchImanagerTab} from '../../../actions/cstmService'
@@ -31,8 +31,6 @@ const HEADER = ()=>(<Text
 
 
 
-const dsms =()=>Keyboard.dismiss()
-
 class Imanager extends Component{
     static navigationOptions = ({navigation})=>({
 	headerTitle:<HEADER />,
@@ -41,11 +39,11 @@ class Imanager extends Component{
 	headerRight:<Right navigation={navigation}/>,	
     })
     render(){
-	const {imanagerTab,dispatch} = this.props
+	const {imanagerTab,dispatch, navigation} = this.props
 	return(
 		<ImanagerModel
-	    dsms={dsms}
 	    imanagerTab={imanagerTab}
+	    navigation = {navigation}
 	    switchImanagerTab={(tab)=>dispatch(switchImanagerTab(tab))}
 		/>
 	)

@@ -31,7 +31,7 @@ const infortgs = ds.cloneWithRows(infortg)
 const setrtgs = ds.cloneWithRows(setrtg)
 const prortgs = ds.cloneWithRows(prortg)
 
-const Mine = () => (
+const Mine = ({logOut}) => (
 	<ScrollView style={s.ctnr}>
 	<View style={s.sctnr} >
 	<Image style={s.shop} source={require('./logo.png')}/>
@@ -64,7 +64,7 @@ const Mine = () => (
     removeClippedSubviews={false}
         /></View>
 	
-	<TouchableOpacity style={s.btn} onPress={()=>Alert.alert('aa')}>
+	<TouchableOpacity style={s.btn} onPress={()=>logOut()}>
 	<Text style={s.btnf}>退出登录</Text>
 	</TouchableOpacity>
     </ScrollView>

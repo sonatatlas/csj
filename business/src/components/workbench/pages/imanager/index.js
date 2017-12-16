@@ -12,12 +12,12 @@ import Ctn from './ctn'
 import s from './style.js'
 
 
-const Imanager = ({dsms,imanagerTab,switchImanagerTab}) => (
-	<TouchableWithoutFeedback onPress={dsms}><View style={s.ctnr}>
+const Imanager = ({imanagerTab,switchImanagerTab, navigation}) => (
+	<View style={s.ctnr}>
 	<StatusBar barStyle="dark-content"/>
 	<Tabs imanagerTab={imanagerTab} switchImanagerTab={switchImanagerTab} />
-	<Ctn imanagerTab={imanagerTab}/>
-	</View></TouchableWithoutFeedback>
+	<Ctn imanagerTab={imanagerTab} navigation={ navigation }/>
+	</View>
 );
 
 export default Imanager

@@ -9,10 +9,10 @@ mongoose.connect('mongodb://localhost/csj',{
 //schema
 
 const accountSchema = mongoose.Schema({
-    openid:String,
-    tel:String,
+    openid:String,//wechat id
+    tel:Number,
     psw:String,
-    order:Array
+    business: Boolean,
 })
 
 const shopSchema = mongoose.Schema({
