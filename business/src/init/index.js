@@ -22,10 +22,10 @@ const resizeScale = ()=>{
 }
 
 const fs = ()=> Platform.OS ==='ios'?
-    resizeScale():
+      resizeScale():
       PixelRatio.get()/PixelRatio.getFontScale()
 
-const SERVER = 'http://172.20.10.3:6262/business'
+const SERVER = 'http://192.168.31.102:6262/business'
 
 const color = '#4283a1'
 

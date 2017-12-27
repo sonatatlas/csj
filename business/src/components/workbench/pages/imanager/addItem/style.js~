@@ -10,11 +10,30 @@ const style = StyleSheet.create({
 	flexDirection:'row',
 	width:css.deviceWidth,
 	backgroundColor:css.light,
+	marginTop:10,
+	marginBottom:10
 	
     },
     barf:{
 	margin:10,
-	
+	fontSize:css.f4
+    },
+    imgWrap:{
+	height:120,
+	backgroundColor:css.light
+    },
+    imgLabel:{
+	display:'flex',
+	alignItems:'center',
+	justifyContent:'center',
+	backgroundColor:css.light
+    },
+    ti:{
+	padding:3,
+	width: 120,
+	fontSize:css.f1,
+	borderWidth:1,
+	borderColor:'#ddd'
     }
 })
 

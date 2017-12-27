@@ -10,17 +10,17 @@ import Item from './item'
 import s from './style'
 const url = 'a'
 const moduleList = [{
-    label:'订单管理', icon:SERVER+'/b/workbench/order.png',isnew:'',jump:'Omanager'
+    label:'订单管理', icon:require('./icon/order.png'),isnew:'',jump:'Omanager'
 },{
-    label:'维权管理', icon:SERVER+'/b/workbench/protect.png',isnew:'',jump:'Pmanager'    
+    label:'维权管理', icon:require('./icon/protect.png'),isnew:'',jump:'Pmanager'    
 },{    			   
-    label:'商品管理', icon:SERVER+'/b/workbench/items.png',isnew:'',jump:'ItemCategory'
+    label:'商品管理', icon:require('./icon/items.png'),isnew:'',jump:'ItemCategory'
 },{			   
-    label:'数据统计',icon:SERVER+'/b/workbench/statistics.png',isnew:'',jump:'Statitics'
+    label:'数据统计',icon:require('./icon/statistics.png'),isnew:'',jump:'Statitics'
 },{			   
-    label:'打理店铺',icon:SERVER+'/b/workbench/profit.png',isnew:'new',jump:'Renovate'
+    label:'打理店铺',icon:require('./icon/profit.png'),isnew:'new',jump:'Renovate'
 },{			   
-    label:'分销商城',icon:SERVER+'/b/workbench/dispatch.png',isnew:'new',jump:'Store'
+    label:'分销商城',icon:require('./icon/dispatch.png'),isnew:'new',jump:'Store'
 }]
 		    
   

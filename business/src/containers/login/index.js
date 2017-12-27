@@ -18,6 +18,8 @@ class Login extends Component{
     }
     
     _sendLogin = async () =>{
+	console.log(SERVER)
+	console.log('tap login')
 	try{
 	    let { dispatch, login } = this.props
 	    let res = await fetch( SERVER +'/login', {

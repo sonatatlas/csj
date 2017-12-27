@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux'
-import AddItemModel from '../../../../components/workbench/pages/imanager/addItem'
+import ItemCategoryModel from '../../../../components/workbench/pages/imanager/itemCategory'
 import {
     Keyboard,Image,View,TouchableOpacity,Text
 } from 'react-native'
@@ -18,20 +18,22 @@ const Back = ({navigation})=>(
 const HEADER = ()=>(<Text
                     allowFontScaling={false}
                     style={{color:css.dark,fontSize:css.f2}}
-                    >添加商品</Text>)
+                    >商品管理</Text>)
 
 
 
-class AddItem extends Component{
+const dsms =()=>Keyboard.dismiss()
+
+class Imanager extends Component{
     static navigationOptions = ({navigation})=>({
 	headerTitle:<HEADER />,
-        headerStyle:{backgroundColor:css.light},
+        headerStyle:{backgroundColor:css.light, borderBottomWidth:0},
 	headerLeft:<Back navigation={navigation}/>,
     })
     render(){
 	const {imanagerTab,dispatch, navigation} = this.props
 	return(
-		<AddItemModel navigation={navigation} />
+		<ItemCategoryModel navigation={navigation} />
 	)
     }
 }
@@ -43,7 +45,7 @@ const mapStateToProps = state=>{
 	imanagerTab
     }
 }
-export default connect(mapStateToProps)(AddItem)
+export default connect(mapStateToProps)(Imanager)
 
 
 

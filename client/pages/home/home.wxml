@@ -1,5 +1,5 @@
-<!--pages/home/home.wxml-->
-<view class="search-wrapper">
+<!-- pages/home/home.wxml -->
+  <view class="search-wrapper">
   <input class="search" placeholder-class='ph' placeholder='搜索' />
 </view>
 
@@ -28,4 +28,8 @@
   <view style="font-size:12pt;margin:3vw">一些介绍</view></view>
   </view>
 </view>
-
+   
+ <!-- <view style="height:1000pt;align-item:center;justify-content:center">
+ <view style='height:150pt'></view>
+<button bindtap='payment'type='primary'>支付</button>
+</view> -->

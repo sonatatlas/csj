@@ -8,7 +8,7 @@ import {
 
 import s from './style'
 
-const Item = () => (
+export const Item = () => (
 	<View style={s.item}>
 	<View style={s.ctn}>
 

@@ -30,4 +30,6 @@ const RootNavigator = StackNavigator({
     AddItem: { screen: AddItemScreen }
 });
 
+
+
 export default RootNavigator;

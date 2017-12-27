@@ -22,6 +22,10 @@ const style = StyleSheet.create({
 	height:120,
 	backgroundColor:css.light
     },
+    img:{
+	width:50,
+	height:50
+    },
     imgLabel:{
 	display:'flex',
 	alignItems:'center',
@@ -29,8 +33,8 @@ const style = StyleSheet.create({
 	backgroundColor:css.light
     },
     ti:{
-	marginLeft:5,
-	width: 200,
+	padding:3,
+	width: 120,
 	fontSize:css.f1,
 	borderWidth:1,
 	borderColor:'#ddd'

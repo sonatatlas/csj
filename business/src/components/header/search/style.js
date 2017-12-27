@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native'
+import {css} from 'init'
 
 const style = StyleSheet.create({
     ctnr:{
@@ -8,7 +9,7 @@ const style = StyleSheet.create({
 	alignItems:'center'
     },
     sf:{
-	fontSize:15,
+	fontSize:css.f1,
 	color:'#999'
     }
 })

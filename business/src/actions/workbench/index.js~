@@ -1,0 +1,7 @@
+
+export const ITEMTAB = "ITEMTAB"
+
+export const switchTab = reddit =>({
+    type: ITEMTAB,
+    reddit
+})

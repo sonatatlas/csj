@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux'
 import ItemCategoryModel from '../../../../components/workbench/pages/imanager/itemCategory'
+import {switchTab}  from '../../../../actions/workbench'
 import {
     Keyboard,Image,View,TouchableOpacity,Text
 } from 'react-native'
@@ -18,7 +19,7 @@ const Back = ({navigation})=>(
 const HEADER = ()=>(<Text
                     allowFontScaling={false}
                     style={{color:css.dark,fontSize:css.f2}}
-                    >商品分类</Text>)
+                    >商品管理</Text>)
 
 
 
@@ -27,22 +28,26 @@ const dsms =()=>Keyboard.dismiss()
 class Imanager extends Component{
     static navigationOptions = ({navigation})=>({
 	headerTitle:<HEADER />,
-        headerStyle:{backgroundColor:css.light},
+        headerStyle:{backgroundColor:css.light, borderBottomWidth:0},
 	headerLeft:<Back navigation={navigation}/>,
     })
     render(){
-	const {imanagerTab,dispatch, navigation} = this.props
+	const { navigation, itemTab, dispatch} = this.props
+	const _switchTab = (tab) =>{dispatch(switchTab(tab))}
 	return(
-		<ItemCategoryModel navigation={navigation} />
+		<ItemCategoryModel
+	    navigation={navigation} _switchTab={_switchTab}
+	    itemTab = {itemTab}
+		/>
 	)
     }
 }
 
 
 const mapStateToProps = state=>{
-    const {imanagerTab} = state.cstmServiceReducer
+    const { itemTab }  = state.workbenchReducer
     return{
-	imanagerTab
+	itemTab
     }
 }
 export default connect(mapStateToProps)(Imanager)

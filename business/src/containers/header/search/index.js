@@ -14,12 +14,12 @@ const Right = ({navigation})=>(
         <TouchableOpacity
     onPress = {()=>navigation.goBack()}
         >
-	<Text style={s.cancel}>取消</Text>
+	<Text allowFontScaling={false} style={s.cancel}>取消</Text>
         </TouchableOpacity>)
 
 const SEARCH = ()=>(
         <View style={s.tiw}>
-        <TextInput style={s.ti} placeholder={'搜索订单'} />
+        <TextInput style={s.ti} placeholder={'搜索'} />
         </View>
 )
 

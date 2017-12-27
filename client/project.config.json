@@ -9,8 +9,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.6.0",
-	"appid": "wx4b05bde965d87de0",
-	"projectname": "csj",
+	"appid": "wx9e3eafdbb24f089c",
+	"projectname": "csjtest",
 	"miniprogramRoot": "./",
 	"condition": {
 		"search": {

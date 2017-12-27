@@ -9,14 +9,14 @@ App({
     // 登录
     wx.login({
       success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        // wx.request({
-        //   url: url+"/login?code="+res.code,
-        //   method: 'GET',
-        //   success:(res)=>{
-        //     wx.setStorageSync('openid', res.data.openid)
-        //   }
-        // })
+       // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        wx.request({
+          url: url+"/login?code="+res.code,
+          method: 'GET',
+          success:(res)=>{
+            wx.setStorageSync('openid', res.data.openid)
+          }
+        })
       }
     })
 
@@ -47,6 +47,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    url: "http://192.168.1.105:6262/client"
+    url: "http://192.168.31.102:6262/client"
   }
 })

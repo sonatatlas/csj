@@ -1,22 +1,42 @@
 import React from 'react'
 
 import {
-    View, Text, TouchableOpacity
+    View, Text, TouchableOpacity, TextInput, TouchableWithoutFeedback,Keyboard
 } from 'react-native'
 
 import s from './style.js' 
 
 const CategoryBar = ({navigation}) =>(
-	<TouchableOpacity style={s.barBtn} onPress={()=>navigation.navigate('Imanager')}>
-	<Text style={s.barf} allowFontScaling={false} >未分类</Text>
-	<Text style={s.barf} allowFontScaling={false} >18件商品</Text>
+	<TouchableOpacity style={s.barBtn} onPress={()=>navigation.navigate('Search',{from:'addItem'})}>
+	<Text style={s.barf} allowFontScaling={false} >分类</Text>
+	<Text style={s.barf} allowFontScaling={false} >选择</Text>
 	</TouchableOpacity>
 )
 
-const ItemCategoryModel = ({navigation}) =>(
+const AddItemModel = ({navigation}) =>(
+	<TouchableWithoutFeedback onPress={()=>Keyboard.dismiss()} >
 	<View style={{display:'flex',flex:1,marginTop:10}}>
-	<CategoryBar navigation={navigation}/>
+
+	<View style={s.imgWrap}>
+	<View style={s.img}></View>
+	</View>	
+	<View style={s.imgLabel}>
+	<Text style={s.barf} allowFontScaling={false} >添加商品</Text>
 	</View>
+
+	<CategoryBar  navigation={navigation} />
+
+	<View style={s.detail}>
+	<View style={[s.barBtn,{marginTop:0,marginBottom:0,justifyContent:'flex-start'}]}>
+	<Text style={s.barf} allowFontScaling={false} >价格</Text>
+	<TextInput keyboardType="numeric" placeholder="单位:元" style={s.ti} />
+	<Text style={s.barf} allowFontScaling={false} >库存</Text>
+	<TextInput keyboardType="numeric" placeholder="单位:件" style={s.ti} />	
+	</View>
+	</View>
+
+    </View>
+	</TouchableWithoutFeedback>
 )
 
-export default ItemCategoryModel
+export default AddItemModel

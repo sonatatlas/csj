@@ -10,5 +10,4 @@ business.post('/login',login.post)
 
 
 
-
 module.exports= business

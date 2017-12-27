@@ -27,12 +27,14 @@ const Right = ({navigation})=>(
 
 
 class CstmService extends Component{
-    static navigationOptions = ({navigation})=>({
-	headerTitle:<HEADER />,
-        headerStyle:{backgroundColor:css.color,borderBottomWidth:0},
-	headerRight: <Right navigation={navigation}/>,
-        tabBarIcon:ICON
-    })
+    static navigationOptions = ({navigation, screenProps })=>{
+	return({
+	    headerTitle:<HEADER />,
+            headerStyle:{backgroundColor:css.color,borderBottomWidth:0},
+	    headerRight: <Right navigation={navigation}/>,
+            tabBarIcon:ICON
+	})
+    }
     render(){
 	const {isLeft,dispatch,navigation} = this.props
 	return(
@@ -41,7 +43,6 @@ class CstmService extends Component{
 	    navigation={navigation}
 	    switchAccessTab={(left)=>dispatch(switchAccessTab(left))}
 		/>
-
 	)
     }
 }

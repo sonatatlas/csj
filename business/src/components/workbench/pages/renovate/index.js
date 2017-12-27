@@ -11,6 +11,7 @@ import Module from './module'
 
 const Imanager = ({dsms}) => (
 	<TouchableWithoutFeedback onPress={dsms}><ScrollView style={s.ctnr}>
+	<StatusBar barStyle="dark-content"/>
 	<View style={s.tt}>
 	<Text style={s.lt}>您的店铺商业: 服饰行业</Text>
 	<TouchableOpacity style={s.btn}><Text style={s.ct}>点击修改</Text></TouchableOpacity>

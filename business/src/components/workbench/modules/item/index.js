@@ -10,7 +10,7 @@ import s from '../style.js'
 const Item = ({info,navigate})=>(
 	<TouchableOpacity style={s.nctnr}
     onPress={()=>{navigate(info.jump)}}>
-	<Image style={s.icon} source={{uri:info.icon}}/>
+	<Image style={s.icon} source={info.icon}/>
 	<Text allowFontScaling={false} style={s.label}>{info.label}</Text>
 	</TouchableOpacity>
 )
