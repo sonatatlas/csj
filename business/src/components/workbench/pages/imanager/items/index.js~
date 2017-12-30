@@ -3,12 +3,12 @@
 
 import React from 'react';
 import {
-    View, Text, TouchableOpacity, Image, ScrollView
+    View, Text, TouchableOpacity, Image, ScrollView, ListView
 } from 'react-native';
 
 import s from './style'
 
-export const Item = () => (
+const Item = () => (
 	<View style={s.item}>
 	<View style={s.ctn}>
 
@@ -28,9 +28,9 @@ export const Item = () => (
 	<Text style={s.detailctn} allowFontScaling={false} >添加: 2018/1/1</Text>	
 	</View></View>
 	
-	</View>
+    </View>
 	
-	</View>
+    </View>
 	<View style={s.btnwrap}>
 	<TouchableOpacity style={s.btn}>
 	<Text style={s.tabf} allowFontScaling={false} >修改</Text>
@@ -48,16 +48,21 @@ export const Item = () => (
 	</View>
 )
 
-const Tabs = ({ imanagerTab, navigation }) => (
-	<View style={{display:'flex',flex:1}}>
-	<ScrollView>
-	<Item />	
-	</ScrollView>
-	<TouchableOpacity style={s.addItem} onPress={()=>navigation.navigate('AddItem')}>
-	<Text style={s.tabf} allowFontScaling={false} >添加商品</Text>
-	</TouchableOpacity>
-	</View>
-)
-    
+const Items = ({navigation, items}) => {
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    const dataSource = ds.cloneWithRows(items)
+    return(
+            <View style={{display:'flex',flex:1}}>
+            <ScrollView>
+            <ListView
+        dataSource={dataSource} enableEmptySections={true}
+        renderRow={(rowData) => <Item itemData={rowData} />}
+            />
+            </ScrollView>
+            <TouchableOpacity style={s.addItem} onPress={()=>navigation.navigate('AddItem')}>
+            <Text style={s.tabf} allowFontScaling={false} >添加商品</Text>
+            </TouchableOpacity></View>
+    )
+}
 
-export default Tabs
+export default Items

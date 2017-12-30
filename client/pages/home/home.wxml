@@ -1,33 +1,5 @@
 <!-- pages/home/home.wxml -->
-  <view class="search-wrapper">
-  <input class="search" placeholder-class='ph' placeholder='搜索' />
-</view>
-
-<swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{true}}" interval="{{5000}}" duration="{{1000}}">
-  <block wx:for="{{shopInfo.banner}}" wx:key="unique" >
-    <swiper-item >
-      <image src="{{item}}" mode='scaleToFill' style='display:flex;width:100%'/>
-    </swiper-item>
-  </block>
-</swiper>
-
-<view class="container">
-<view class='title'>店主推荐</view>
-<scroll-view scroll-x>
-<view class="purchase-wrapper">
-<view wx:key='unique' wx:for="{{shopInfo.groupPurchase}}" >
-  <image class='purchase-item' src="{{item}}"/>
-</view></view>
-</scroll-view>
-</view>
-<view class="container">
-  <view class="title">草市好物</view>
-  <view wx:key='unique' wx:for="{{shopInfo.items}}" >
-  <view class="detail-container"><image class='good-item' src="{{item}}"/>
-  <view style="font-size:12pt;margin:3vw">一些介绍</view></view>
-  </view>
-</view>
+<view><text>aaa</text></view>
    
  <!-- <view style="height:1000pt;align-item:center;justify-content:center">
  <view style='height:150pt'></view>

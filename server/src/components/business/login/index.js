@@ -1,11 +1,13 @@
 //login.js
 
-const Account = require('../../mongo').Account
+const Shop = require('../../mongo').Shop
 
 const post =async ctx=>{
     let body = ctx.request.body
-    let docs = await Account.findOne({tel: body.tel})
-    if(body.psw === docs.psw){
+    console.log(body)
+    let docs = await Shop.findOne({"owner.account": body.account})
+    if(docs && body.password === docs.owner.password){
+	console.log(docs)
 	ctx.body = { verify : true }
     }else{
 	ctx.body = { verify : false }

@@ -1,22 +1,26 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 
 import {
-    TouchableWithoutFeedback,
-    StatusBar,Alert
+    TouchableWithoutFeedback, TouchableOpacity,Text,ScrollView,
+    StatusBar,Alert, View
 }from 'react-native'
 
 import Tabs  from './tabs'
-import Ctn from './ctn'
+import Items from './items'
 
 import s from './style.js'
 
 
-const Imanager = ({imanagerTab,switchImanagerTab, navigation}) => (
+const Imanager = ({imanagerTab,switchImanagerTab, navigation, items }) => (
 	<View style={s.ctnr}>
 	<StatusBar barStyle="dark-content"/>
 	<Tabs imanagerTab={imanagerTab} switchImanagerTab={switchImanagerTab} />
-	<Ctn imanagerTab={imanagerTab} navigation={ navigation }/>
+        <View style={{display:'flex',flex:1}}>
+        <Items navigation={navigation} items={items}/>
+        <TouchableOpacity style={s.addItem} onPress={()=>navigation.navigate('AddItem')}>
+        <Text style={s.tabf} allowFontScaling={false} >添加商品</Text>
+        </TouchableOpacity>
+        </View>
 	</View>
 );
 

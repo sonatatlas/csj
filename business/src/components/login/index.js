@@ -10,7 +10,6 @@ import {
     TouchableWithoutFeedback,KeyboardAvoidingView
 }from 'react-native'
 
-
 import s from './style.js'
 
 const Login = ({ inputValue, sendLogin})=>(
@@ -19,9 +18,9 @@ const Login = ({ inputValue, sendLogin})=>(
 	<Image style={s.logo} source={require('./logo.png')}/>
 	<View style={s.space}/>
 	<View style={s.tiw}><TextInput allowFontScaling={false} style={s.ti}
-    onChangeText={(text)=>inputValue('tel',text)} /></View>
+    onChangeText={(text)=>inputValue('account',text)} /></View>
 	<View style={s.tiw}><TextInput allowFontScaling={false} secureTextEntry={true} style={s.ti}
-    onChangeText={(text)=>inputValue('psw',text)}/></View>
+    onChangeText={(text)=>inputValue('password',text)}/></View>
 	<TouchableOpacity style={s.btn} title={'登录'} onPress={()=>sendLogin()}>
 	<Text style={s.fontl} allowFontScaling={false}>登录</Text></TouchableOpacity>
 	</KeyboardAvoidingView>

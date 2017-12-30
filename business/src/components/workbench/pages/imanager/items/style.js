@@ -1,0 +1,73 @@
+import {StyleSheet} from 'react-native'
+import {css} from 'init'
+const style = StyleSheet.create({
+    ctn:{
+	display:'flex',
+	flexDirection:'row',
+	backgroundColor:css.light,
+	borderBottomWidth:0.5,
+	borderColor:'#ddd',
+	paddingTop:5
+    },
+    left:{
+	display:'flex',
+	margin:10
+    },
+    img:{
+	width:108,
+	height:108
+    },
+    right:{
+	display:'flex',
+	width:230,
+	marginLeft:20
+    },
+    title:{
+	fontSize:css.f1,
+	marginTop:20
+    },
+    price:{
+	marginTop:3,
+	marginBottom:3,
+	fontSize:css.f1,
+	color:'red'
+    },
+    detailwrap:{
+	display:'flex',
+	flex:1,
+	marginTop:30,
+	flexDirection:'row',
+    },
+    detailctn:{
+	width:'50%',
+	color:'#999',
+	fontSize:css.f4
+    },
+    btnwrap:{
+	display:'flex',
+	flexDirection:'row',
+	alignItems:'center',
+	justifyContent:'space-around',
+	backgroundColor:css.light,
+    },
+    btn:{
+	margin:3,
+	width:css.deviceWidth/4
+    },
+    tabf:{
+	fontSize:css.f1,
+	margin:8
+    },
+    addItem:{
+	padding:5,
+	position:'absolute',
+	display:'flex',
+	justifyContent:'center',
+	alignItems:'center',
+	backgroundColor:css.light,
+	width:'100%',
+	bottom:0,
+    }
+})
+
+export default style

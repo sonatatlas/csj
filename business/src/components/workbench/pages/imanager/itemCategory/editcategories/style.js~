@@ -1,0 +1,10 @@
+
+import { StyleSheet } from 'react-native'
+
+import { css } from 'init'
+
+const style = StyleSheet.create({
+    
+})
+
+export default style

@@ -6,6 +6,7 @@ import reducer from './src/reducers'
 import {createStore,applyMiddleware} from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
+import logger from 'redux-logger'
 import promise from 'redux-promise-middleware'
 
 import { AsyncStorage } from 'react-native'
@@ -18,9 +19,9 @@ const store = createStore(
     applyMiddleware(...middleware)
 )
 
-AsyncStorage.getItem('accountTel',(err,value)=>{
+AsyncStorage.getItem('account',(err,value)=>{
     if(value){
-	store.dispatch(login({tel:value}))
+	store.dispatch(login({account:value}))
     }
 })
 

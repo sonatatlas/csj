@@ -5,7 +5,7 @@ import {
 
 export const LOGIN = "LOGIN"
 export const ACCOUNTANDPASSWD = "ACCOUNTANDPASSWD"
-
+export const UPDATECATEGORIES = "UPDATECATEGORIES"
 
 export const login = reddit => ({
     type:LOGIN,

@@ -16,12 +16,21 @@ const accountSchema = mongoose.Schema({
 })
 
 const shopSchema = mongoose.Schema({
-    openid:String,
-    info:[{name:String}],
-    banner:Array,
-    recommend:Array,
-    groupPurchase:Array,
-    items:Array
+    info : {
+	name : String,
+	logo : String,
+	label : Array,
+	discount : String,
+	intro : String,
+	address : String,	
+    },
+    owner : {
+	account : String,
+	password : String,
+	subAccount : Array
+    },
+    items : Array,    
+    categories : [],
 })
 
 

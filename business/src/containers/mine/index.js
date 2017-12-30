@@ -39,7 +39,7 @@ class Mine extends Component{
     })
     _logOut = () =>{
 	let { dispatch } = this.props
-	AsyncStorage.removeItem('accountTel')
+	AsyncStorage.removeItem('account')
 	dispatch(login(false))
 	Alert.alert('退出成功!')
     }

@@ -1,12 +1,15 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux'
 import ItemCategoryModel from '../../../../components/workbench/pages/imanager/itemCategory'
-import {switchTab}  from '../../../../actions/workbench'
 import {
-    Keyboard,Image,View,TouchableOpacity,Text
+    switchTab, updateItems, updateCategories,
+    getCategories, getItems
+}  from '../../../../actions/workbench'
+import {
+    Keyboard,Image,View,TouchableOpacity,Text, AsyncStorage
 } from 'react-native'
 
-import {css} from 'init'
+import { css, SERVER } from 'init'
 
 const Back = ({navigation})=>(
 	<TouchableOpacity
@@ -31,13 +34,19 @@ class Imanager extends Component{
         headerStyle:{backgroundColor:css.light, borderBottomWidth:0},
 	headerLeft:<Back navigation={navigation}/>,
     })
+    componentWillMount(){
+	getCategories(this.props.dispatch)
+	getItems(this.props.dispatch)	
+    }
     render(){
-	const { navigation, itemTab, dispatch} = this.props
+	const {
+	    navigation, itemTab, dispatch, categories, items
+	} = this.props
 	const _switchTab = (tab) =>{dispatch(switchTab(tab))}
 	return(
 		<ItemCategoryModel
-	    navigation={navigation} _switchTab={_switchTab}
-	    itemTab = {itemTab}
+	    navigation={navigation} switchTab={_switchTab}
+	    itemTab = {itemTab} items={items} categories={categories}
 		/>
 	)
     }
@@ -45,9 +54,9 @@ class Imanager extends Component{
 
 
 const mapStateToProps = state=>{
-    const { itemTab }  = state.workbenchReducer
+    const { itemTab, categories, items }  = state.workbenchReducer
     return{
-	itemTab
+	categories, itemTab, items
     }
 }
 export default connect(mapStateToProps)(Imanager)

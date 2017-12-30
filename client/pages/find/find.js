@@ -28,43 +28,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    let openid = wx.getStorageSync('openid')
-    let url = app.globalData.url
-    console.log(openid)
-    let timeStamp = Date.now().toString()
-    let No = 'N' + timeStamp
-    wx.request({
-      url: url + '/test',
-      method: 'POST',
-      data: {
-        bookingNo: No,  /*订单号*/
-        total_fee: 1,   /*订单金额*/
-        openid: openid,
-        timeStamp: timeStamp,
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        console.log(res.data)
-        wx.requestPayment({
-          'timeStamp': timeStamp,
-          'nonceStr': 'nonceStr',
-          'package': 'prepay_id=' + res.data.prepay_id,
-          'signType': 'MD5',
-          'paySign': res.data._paySignjs,
-          'success': function (res) {
-            console.log(res);
-          },
-          'fail': function (res) {
-            console.log('fail:' + JSON.stringify(res));
-          }
-        })
-      },
-      fail: function (err) {
-        console.log(err)
-      }
-    })
   },
 
   /**

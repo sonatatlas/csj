@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-    StackNavigator, addNavigationHelpers
-} from 'react-navigation';
+import { StackNavigator } from 'react-navigation';
 
 
 import RootTabs from '../rootTabs'

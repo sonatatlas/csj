@@ -1,6 +1,6 @@
 
 import { StyleSheet } from 'react-native'
-import {css} from 'init'
+import {css, deviceWidth} from 'init'
 
 const style = StyleSheet.create({
     barBtn :{
@@ -10,11 +10,43 @@ const style = StyleSheet.create({
 	flexDirection:'row',
 	width:css.deviceWidth,
 	backgroundColor:css.light,
-	
     },
     barf:{
-	margin:10,
+	margin:12,
+	marginLeft:20,
+	marginRight:20
+    },
+    tabwrap:{
+	display: 'flex',
+	flexDirection:'row',
+	borderWidth:1,
+	borderColor:'#eee'
+    },
+    tab:{
+	display:'flex',
+	backgroundColor:css.light,
+	justifyContent:'center',
+	alignItems:'center',
+	width:deviceWidth/2
 	
+    },
+    tf:{
+	margin:10,
+	fontSize:css.f1
+    },
+    tabf:{
+        fontSize:css.f1,
+        margin:8
+    },
+    addItem:{
+        padding:5,
+        position:'absolute',
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        backgroundColor:css.light,
+        width:'100%',
+        bottom:0,
     }
 })
 

@@ -36,13 +36,13 @@ class Imanager extends Component{
 	headerTitle:<HEADER />,
         headerStyle:{backgroundColor:css.light},
 	headerLeft:<Back navigation={navigation}/>,
-	headerRight:<Right navigation={navigation}/>,	
+	headerRight:<Right navigation={navigation}/>,
     })
     render(){
-	const {imanagerTab,dispatch, navigation} = this.props
+	const {imanagerTab,dispatch, navigation, items} = this.props
 	return(
 		<ImanagerModel
-	    imanagerTab={imanagerTab}
+	    imanagerTab={imanagerTab} items = {items}
 	    navigation = {navigation}
 	    switchImanagerTab={(tab)=>dispatch(switchImanagerTab(tab))}
 		/>
@@ -53,8 +53,9 @@ class Imanager extends Component{
 
 const mapStateToProps = state=>{
     const {imanagerTab} = state.cstmServiceReducer
+    const { items } = state.workbenchReducer
     return{
-	imanagerTab
+	imanagerTab, items 
     }
 }
 export default connect(mapStateToProps)(Imanager)

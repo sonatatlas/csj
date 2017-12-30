@@ -18,8 +18,6 @@ class Login extends Component{
     }
     
     _sendLogin = async () =>{
-	console.log(SERVER)
-	console.log('tap login')
 	try{
 	    let { dispatch, login } = this.props
 	    let res = await fetch( SERVER +'/login', {
@@ -32,8 +30,8 @@ class Login extends Component{
 	    })
 	    let resJson = await res.json()
 	    if(resJson.verify){
-		dispatch(_login({tel:login.enterValue.tel}))
-		await AsyncStorage.setItem('accountTel',login.enterValue.tel)
+		dispatch(_login(true))
+		await AsyncStorage.setItem('account',login.enterValue.account)
 
 	    }else{
 		Alert.alert('账号或密码错误')

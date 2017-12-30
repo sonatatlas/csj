@@ -10,12 +10,17 @@ const style = StyleSheet.create({
 	flexDirection:'row',
 	width:css.deviceWidth,
 	backgroundColor:css.light,
-	
     },
     barf:{
-	margin:10,
-	
+	margin:12,
+	marginLeft:20,
+	marginRight:20
     },
+    barf2:{
+	margin:12,
+	marginLeft:30,
+	marginRight:20
+    },    
     tabwrap:{
 	display: 'flex',
 	flexDirection:'row',
@@ -33,6 +38,20 @@ const style = StyleSheet.create({
     tf:{
 	margin:10,
 	fontSize:css.f1
+    },
+    tabf:{
+        fontSize:css.f1,
+        margin:8
+    },
+    addItem:{
+        padding:5,
+        position:'absolute',
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        backgroundColor:css.light,
+        width:'100%',
+        bottom:0,
     }
 })
 

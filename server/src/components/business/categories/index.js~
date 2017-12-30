@@ -1,0 +1,22 @@
+//login.js
+
+const Shop = require('../../mongo').Shop
+
+const get =async ctx=>{
+    console.log('you get me ')
+    let query = ctx.request.query
+    let docs = await Shop.findOne({'owner.account' : query.account })
+    console.log(docs.categories)
+    ctx.body = docs.categories
+	
+}
+
+const post = async ctx => {
+    let body = ctx.request.body
+    console.log(body)
+}
+
+module.exports={
+    get,
+    post
+}

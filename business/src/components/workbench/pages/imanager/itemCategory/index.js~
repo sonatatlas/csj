@@ -6,40 +6,34 @@ import {
 
 import s from './style.js' 
 
-import { Item } from '../ctn'
+import Allitems from '../items'
+import Categories from './categories'
 
-const Ctn = ({navigation, itemTab}) =>{
+const Ctn = ({navigation, itemTab, items, categories}) =>{
     if(itemTab===1){
-	return(
-	    <ScrollView>
-		<Item />
-		</ScrollView>
-	)
+	return( <Allitems navigation={navigation} items={items} /> )
     }else{
-	return(
-		<TouchableOpacity style={s.barBtn} onPress={()=>navigation.navigate('Imanager')}>
-		<Text style={s.barf} allowFontScaling={false} >未分类</Text>
-		<Text style={s.barf} allowFontScaling={false} >18件商品</Text>
-		</TouchableOpacity>
-	)
+	return( < Categories navigation = {navigation} categories={categories} /> )
     }
 }
 
-const Tab = ({_switchTab})=>(
+const Tab = ({switchTab})=>(
 	<View style={s.tabwrap}>
-	<TouchableOpacity onPress ={()=>{_switchTab(1)}} style={s.tab}>
+	<TouchableOpacity onPress ={()=>{switchTab(1)}} style={s.tab}>
 	<Text allowFontScaling={false} style={s.tf}>全部商品</Text></TouchableOpacity>
-	<TouchableOpacity onPress ={()=>{_switchTab(2)}} style={s.tab}>
+	<TouchableOpacity onPress ={()=>{switchTab(2)}} style={s.tab}>
 	<Text allowFontScaling={false} style={s.tf}>分类管理</Text></TouchableOpacity>	
 	</View>
 )
 
-const ItemCategoryModel = ({navigation, _switchTab, itemTab }) =>(
+const ItemCategoryModel = ({navigation, switchTab, itemTab, categories, items }) =>{
+    return(
 	<View style={{display:'flex',flex:1}}>
 	<StatusBar barStyle="dark-content"/>
-	<Tab  _switchTab={_switchTab}/>
-	<Ctn navigation={navigation} itemTab={itemTab}/>
+	<Tab  switchTab={switchTab}/>
+	<Ctn navigation={navigation} itemTab={itemTab} items={items} categories={categories}/>
 	</View>
-)
+    )
+}
 
 export default ItemCategoryModel

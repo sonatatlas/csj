@@ -2,8 +2,10 @@
 
 
 import { combineReducers } from 'redux'
-import { ITEMTAB } from '../../actions/workbench'
-import { UPLOAD }  from '../../actions/workbench'
+import {
+    ITEMTAB, UPDATE, UPDATECATEGORIES, UPDATEITEMS
+} from '../../actions/workbench'
+
 
 const itemTab = (state=1, action)=>{
     switch(action.type){
@@ -16,15 +18,33 @@ const itemTab = (state=1, action)=>{
 
 const uploadInfo = (state={}, action)=>{
     switch(action.type){
-    case UPLOAD:
+    case UPDATE:
 	return action.reddit
     default:
 	return state
     }
 }
 
-const navReducers = combineReducers({
-    itemTab, uploadInfo
+const categories = (state=[], action) => {
+    switch(action.type){
+    case UPDATECATEGORIES:
+	return action.reddit
+    default:
+	return state
+    }
+}
+
+const items = ( state = [], action) => {
+    switch(action.type){
+    case UPDATEITEMS:
+	return action.reddit
+    default:
+	return state
+    }
+}
+
+const workbenchReducers = combineReducers({
+    itemTab, uploadInfo, categories, items
 })
 
-export default navReducers
+export default workbenchReducers

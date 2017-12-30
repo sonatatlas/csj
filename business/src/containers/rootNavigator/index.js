@@ -13,6 +13,7 @@ import SearchScreen from '../header/search'
 import QRcodeScreen from '../header/qrcode'
 import RecordScreen from '../header/record'
 import ItemCategoryScreen from '../workbench/imanager/itemCategory'
+import EditCategoriesScreen from '../workbench/imanager/itemCategory/editcategories'
 import AddItemScreen from '../workbench/imanager/addItem'
 
 const RootNavigator = StackNavigator({
@@ -26,7 +27,8 @@ const RootNavigator = StackNavigator({
     QRcode:{screen: QRcodeScreen},        
     Search:{screen: SearchScreen},
     Record:{screen: RecordScreen},
-    ItemCategory: {screen: ItemCategoryScreen},
+    ItemCategory: { screen: ItemCategoryScreen },
+    EditCategories : { screen: EditCategoriesScreen },
     AddItem: { screen: AddItemScreen }
 });
 

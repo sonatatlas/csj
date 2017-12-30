@@ -7,6 +7,8 @@ import {
 
 import {css} from 'init'
 
+import { updateInfo } from '../../../../actions/workbench'
+
 const Back = ({navigation})=>(
 	<TouchableOpacity
     onPress = {()=>navigation.goBack()}
@@ -21,26 +23,37 @@ const HEADER = ()=>(<Text
                     >添加商品</Text>)
 
 
-
 class AddItem extends Component{
     static navigationOptions = ({navigation})=>({
 	headerTitle:<HEADER />,
         headerStyle:{backgroundColor:css.light},
 	headerLeft:<Back navigation={navigation}/>,
     })
+    componentWillMount(){
+	const {imanagerTab,dispatch, navigation, uploadInfo} = this.props
+
+    }
     render(){
-	const {imanagerTab,dispatch, navigation} = this.props
+	const {imanagerTab,dispatch, navigation, uploadInfo} = this.props
+
+	const _updateInfo = async ( form ) => {
+	    await dispatch(updateInfo( form ))
+	}
+ 	
 	return(
-		<AddItemModel navigation={navigation} />
+		<AddItemModel
+	    navigation={navigation} 
+		/>
 	)
     }
 }
 
 
 const mapStateToProps = state=>{
-    const {imanagerTab} = state.cstmServiceReducer
+    const { imanagerTab } = state.cstmServiceReducer
+    const { uploadInfo } = state.workbenchReducer
     return{
-	imanagerTab
+	imanagerTab, uploadInfo
     }
 }
 export default connect(mapStateToProps)(AddItem)

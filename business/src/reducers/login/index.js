@@ -2,8 +2,7 @@
 
 
 import {combineReducers} from 'redux'
-import { LOGIN, ACCOUNTANDPASSWD} from '../../actions/login'
-
+import { LOGIN, REFRESH, ACCOUNTANDPASSWD} from '../../actions/login'
 
 const loginState=(state=false,action)=>{
     switch(action.type){
