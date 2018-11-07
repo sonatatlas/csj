@@ -1,6 +1,0 @@
-const styles = theme =>{
-    category:{
-        width:28,
-        height:28
-    }
-}
